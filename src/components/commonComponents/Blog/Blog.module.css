@@ -1,0 +1,21 @@
+.blogHeading {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #101115;
+    text-align: left;
+}
+.blogPara {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    color: #1B1C21;
+}
+.card {
+    border: none;
+}

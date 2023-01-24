@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  src: local('SF Pro Text'), url('./Fonts/FontsFree-Net-SFProText-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: local('Gilroy-Medium'), url('./Fonts/Gilroy-Medium.ttf') format('truetype');
+}

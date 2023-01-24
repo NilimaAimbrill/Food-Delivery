@@ -1,0 +1,102 @@
+.heroContent {
+  margin-top: 95px;
+  margin-bottom: 166px;
+}
+.heroMain {
+  background-color: #1ac073;
+}
+/* .allHero {
+  padding: 8px 106px 8px 131px !important;
+} */
+.heroContent h1 {
+  font-size: 70px;
+  line-height: 82px;
+  color: white;
+  margin-bottom: 32px;
+  text-align: left;
+  font-family: 'Gilroy-Medium';
+}
+.heroContent p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1.2%;
+  color: #ffffff;
+  padding-right: 115px;
+  text-align: left;
+  margin-bottom: 40px;
+  font-family: 'SF Pro Text';
+}
+.heroImage {
+  margin-top: 65px;
+}
+/* .heroImageCook {
+  width: 521.63px;
+  height: 435.49px;
+} */
+/* @media (max-width: 1100px) {
+  .heroImageCook {
+  }
+  .heroContent h1 {
+    font-size: 41px;
+    line-height: 62px;
+  }
+  .heroContent p{
+    padding: 0px;
+    font-size: 13px;
+  }
+  .heroImageCook {
+    width: 450px;
+    height: 340px;
+  }
+}
+@media (max-width: 940px){
+    .heroImageCook {
+        width: 340px;
+        height: 280px;
+      }
+} */
+@media (max-width: 993px) {
+  .heroContent {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 769px) {
+  .heroContent h1 {
+    font-size: 62px;
+    line-height: 62px;
+  }
+  .heroImageCook {
+    width: 366px;
+    height: 260px;
+  }
+  .heroImage {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 492px) {
+  .heroContent h1 {
+    font-size: 48px;
+  }
+  .heroContent p {
+    padding-right: 15px;
+    /* font-size: 13px; */
+  }
+}
+@media (max-width: 388px) {
+  .heroContent h1 {
+    font-size: 37px;
+    line-height: 50px;
+    margin-bottom: 13px;
+  }
+  .heroImageCook {
+    width: 300px;
+    height: 220px;
+  }
+  .heroContent p {
+    padding-right: 0px;
+    margin-bottom: 20px;
+    /* font-size: 13px; */
+  }
+}

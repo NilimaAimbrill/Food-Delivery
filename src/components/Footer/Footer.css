@@ -1,0 +1,29 @@
+.footerMain {
+  background-color: #1ac073;
+  padding-bottom: 12px;
+}
+.searchShopIcon1 {
+  color: #bebebe;
+}
+.copyright p {
+  color: white;
+}
+hr {
+  margin: 5px 0px 0px;
+}
+.copyright {
+  margin-top: 16px;
+}
+.fbig {
+  list-style-type: none;
+  display: flex;
+}
+.fbig path {
+  color: white;
+}
+.footer {
+  padding: 0px !important ;
+}
+.footerFluid {
+  padding-right: 0px !important;
+}

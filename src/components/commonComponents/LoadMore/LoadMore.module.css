@@ -1,0 +1,15 @@
+.loadmorebtn {
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.loadmorebtn button {
+    border: 1px solid #F3BA00;
+    padding: 13px 40px;
+    color: #929292;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'SF Pro Text';
+    text-transform:none;
+}

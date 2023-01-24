@@ -1,0 +1,29 @@
+.button0 {
+    background-color: #F3BA00;
+    border-radius: 10px 0px 0px 10px;
+}
+.button1 {
+    border: 1px solid #F3BA00;
+    padding: 13px 40px;
+    font-family: 'SF Pro Text';
+    font-size: 16px;
+}
+.button2 {
+    border-radius: 0px 10px 10px 0px;
+}
+.btnGrey {
+    color: #929292;
+    background-color: white;
+}
+@media only screen and (min-width: 360px) and (max-width: 722px) {
+    .button1 {
+        padding: 0px 20px;
+        font-size: 12px;
+    }
+}
+@media (max-width:380px) {
+    .button1 {
+        padding: 0px 10px;
+        font-size: 12px;
+    }
+}

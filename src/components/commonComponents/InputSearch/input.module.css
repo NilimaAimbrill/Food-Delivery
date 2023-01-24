@@ -1,0 +1,27 @@
+.searchInput {
+  padding: 28px 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: 'SF Pro Text';
+}
+/* .searchInput input {
+  padding: 19px 15px;
+} */
+
+.searchButton {
+  background: #f3ba00;
+  color: white;
+  padding: 0px 28px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.input-group {
+  width: 398px;
+}
+@media (max-width: 1100px) {
+  .input-group {
+    width: auto;
+  }
+}
