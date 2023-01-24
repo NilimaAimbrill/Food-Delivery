@@ -1,6 +1,7 @@
 .headerMain {
     background-color: #1AC073;
 }
+
 .navBrand {
   font-family: 'Squada One', cursive !important;
   font-style: normal !important;
@@ -10,14 +11,19 @@
   color: white !important;
 
 }
-.navbar-nav {
+.gapBetween{
   gap: 40px !important;
-  
+}
+.gapBetween a {
+  color: white !important;
+
 }
 .navContainer {
   padding-left: 15px !important;
   padding-right: 15px !important;
+  
 }
+
 /* .headerMain .navbar {
   padding: 0.5rem 0rem !important;
 } */
@@ -28,14 +34,11 @@
   color: white !important;
   font-family: 'SF Pro Text' !important;
 }
-button.navbar-toggler {
-  order: 2;
-}
-.navbar-light .navbar-toggler-icon {
-  background: url('../images/menuBtn.png') !important;
-}
-button.navbar-toggler.collapsed {
-  border: none !important;
+
+
+
+.toggleButton {
+  order: 2 !important;
 }
 .navbar-toggler path {
   color: white;
@@ -44,11 +47,16 @@ button.navbar-toggler.collapsed {
 li.nav-item {
   padding-right: 40px;
 }
+button.navbar-toggler.collapsed {
+  order: 3;
+}
 .navlinks {
   justify-content: center;
   font-weight: 400;
 font-size: 18px;
 line-height: 20px;
+color: white !important;
+
 }
 .searchShopIcon1 {
   margin-left: 25px;

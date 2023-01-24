@@ -1,0 +1,80 @@
+.footerMain {
+  background-color: #1ac073;
+  padding-bottom: 12px;
+}
+.searchShopIcon1 {
+  color: #bebebe;
+}
+.navBrand {
+  font-family: 'Squada One', cursive !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 32px !important;
+  line-height: 20px !important;
+  color: white !important;
+
+}
+.searchShopIcon path {
+  color:white
+}
+.searchShopIcon {
+  list-style-type: none;
+display: flex;
+color: white;
+}
+.searchShopIcon1 {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.searchShopIcon {
+  padding: 0px;
+}
+.gapBetween a {
+  color: white !important;
+
+}
+.nav-link {
+  color: white !important;
+  font-family: 'SF Pro Text' !important;
+}
+.gapBetween{
+  gap: 40px !important;
+}
+.copyright p {
+  color: white;
+}
+.navlinks {
+  justify-content: center;
+  font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+color: white !important;
+
+}
+hr {
+  margin: 5px 0px 0px;
+}
+.horizontalLine {
+  color: white;
+  border: 1px solid white;
+}
+.copyright {
+  margin-top: 16px;
+}
+.fbig {
+  list-style-type: none;
+  display: flex;
+}
+.fbig path {
+  color: white;
+}
+.footer {
+  padding: 0px !important ;
+}
+.footerFluid {
+  padding-right: 0px !important;
+}
+
+.toggleButton {
+  order: 2 !important;
+}
