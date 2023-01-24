@@ -1,5 +1,8 @@
 import React from 'react'
 import './Footer.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
@@ -7,36 +10,27 @@ function Footer() {
     return (
         <div className='footerMain'>
             <div className='container'>
-                <nav className="navbar footer navbar-expand-lg bg-body-tertiary">
-                    <div className="container-fluid footerFluid">
-                        <a className="navbar-brand " href="/">WHAT2EAT</a>
-                        <div className="collapse navbar-collapse navlinks" id="navbarSupportedContent">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/">About</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/">Menu</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/">Blog</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
+            <Navbar collapseOnSelect  expand="lg">
+                <Container className='navContainer'>
+                    <Navbar.Brand href="#home" className='navBrand'>WHAT2EAT</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav" className='navlinks'>
+                        <Nav className='gapBetween'>
+                            <Nav.Link className='active' href="#Home">Home</Nav.Link>
+                            <Nav.Link href="#About">About</Nav.Link>
+                            <Nav.Link href="#Menu">Menu</Nav.Link>
+                            <Nav.Link href="#Blog">Blog</Nav.Link>
+                            <Nav.Link href="#Contact">Contact</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                         <div className='d-flex searchShopIconMain'>
-                            <ul className='fbig'>
+                            <ul className='searchShopIcon'>
                                 <li className='searchShopIcon1'><FacebookIcon /></li>
                                 <li className='searchShopIcon1'><InstagramIcon /></li>
                             </ul>
                         </div>
-                    </div>
-                </nav>
+                </Container>
+            </Navbar>
                 <hr style={{ color: "white", border: "1px solid white" }} />
                 <div className='copyright'>
                     <p>Copyright @2021 What2Eat</p>

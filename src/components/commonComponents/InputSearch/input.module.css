@@ -1,5 +1,5 @@
 .searchInput {
-  padding: 28px 15px;
+  padding: 28px 0px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -9,7 +9,9 @@
 /* .searchInput input {
   padding: 19px 15px;
 } */
-
+.searchInput input {
+  padding-left: 10px;
+}
 .searchButton {
   background: #f3ba00;
   color: white;

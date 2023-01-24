@@ -6,7 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function Input() {
     return (
-        <div>
+        <div className={styles.inputMain}>
             <InputGroup className={styles.searchInput}>
                 <Form.Control
                     className={styles.searchInput}
