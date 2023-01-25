@@ -9,7 +9,7 @@ function CommonCard(props) {
     return (
         <div>
             <Card className={styles.card}>
-                <Card.Img variant="top" src={props.img} />
+                <Card.Img className={styles.cardImage} variant="top" src={props.img} />
                 <Card.Body className={styles.myCardBody}>
                     <Card.Text className={styles.cardBodyHead}>
                         <h5 className={styles.cardHeading}>Home made pizza</h5>
@@ -17,7 +17,7 @@ function CommonCard(props) {
                     </Card.Text>
                     <div className={styles.rating}>
                         <div className={styles.buttonRate}>
-                            <Button startIcon={<StarIcon />}>
+                            <Button startIcon={<StarIcon className={styles.starIcon} />}>
                                 4.7
                             </Button>
                             <Button>
@@ -25,7 +25,7 @@ function CommonCard(props) {
                             </Button>
                         </div>
                         <div className={styles.addIcon}>
-                            <AddBoxIcon />
+                            <AddBoxIcon className={styles.addBoxIcon}/>
                         </div>
                     </div>
                 </Card.Body>

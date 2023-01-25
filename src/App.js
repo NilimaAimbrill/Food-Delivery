@@ -1,21 +1,21 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Contact from './components/ContectUs/Contact';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import HeroSection from './components/HeroSection/HeroSection';
-import HomeKitchen from './components/HomeKitchen/HomeKitchen';
-import OurBlog from './components/OurBlog/OurBlog';
+import Home from './components/Home'
+import { ContactUsPage } from './components/ContactUsPage/ContactUsPage';
+// import {QueryClient,QueryClientProvider} from "@tanstack/react-query"
+
 
 function App() {
+
   return (
-    <div className="App">
-      <Header />
-      <HeroSection />
-      <HomeKitchen />
-      <OurBlog />
-      <Contact />
-      <Footer />
+    <div className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<ContactUsPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

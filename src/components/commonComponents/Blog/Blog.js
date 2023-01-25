@@ -6,7 +6,7 @@ function Blog(props) {
     return (
         <div className={styles.cardSize}>
             <Card className={styles.card}>
-                <Card.Img variant="top" src={props.img} />
+                <Card.Img className={styles.blogImage} variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title className={styles.blogHeading}>Most Satisfying Cake decorating
                         Cake ideas</Card.Title>

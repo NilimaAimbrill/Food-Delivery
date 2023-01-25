@@ -19,3 +19,6 @@
 .card {
     border: none;
 }
+.blogImage {
+    cursor: pointer;
+}

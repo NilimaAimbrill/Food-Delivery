@@ -13,3 +13,7 @@
     font-family: 'SF Pro Text';
     text-transform:none;
 }
+.loadmorebtn button:hover {
+    border: 1px solid #1AC073 !important;
+  }
+  
