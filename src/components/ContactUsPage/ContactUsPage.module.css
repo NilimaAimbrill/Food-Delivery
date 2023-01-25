@@ -1,0 +1,47 @@
+.contactInfoCard svg{
+    margin-top: 20px;
+    font-size: 60px;
+    color: #1AC073;
+}
+.headParaContact {
+    padding-top: 40px;
+    text-align: center;
+}
+.contactInfoCard {
+    padding-top: 20px;
+}
+.formHeading {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+.contactSubmitBtn {
+    background-color: #1AC073;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.inputFlex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.formInput {
+    padding: 25px 15px;
+}
+.formInput:focus {
+    border: 2px solid #1AC073 !important;
+    box-shadow: none !important;
+}
+.focusTextArea:focus {
+    border: 2px solid #1AC073 !important;
+    box-shadow: none !important;
+}
+@media (max-width:427px){
+    .inputFlex {
+        display: block;
+    }
+    .formInput {
+        margin-bottom: 30px;
+    }
+}

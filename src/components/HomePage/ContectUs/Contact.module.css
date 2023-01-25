@@ -1,0 +1,69 @@
+.contactMain {
+  background: #f7f8fa;
+  margin-bottom: 60px;
+}
+.deliveryBoyimg {
+  margin-top: 100px;
+}
+.marginBottom {
+  margin-bottom: 60px;
+  padding-bottom: 90px;
+}
+.nameEmail input {
+  padding-top: 19px !important;
+  padding-bottom: 19px !important;
+  border-radius: 10px;
+  border: none;
+}
+.contactContent h3 {
+  margin-top: 100px;
+  font-family: 'Gilroy-Medium';
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.012em;
+}
+.contactContent p {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.012em;
+  margin-bottom: 32px;
+}
+.contactContent {
+  text-align: left;
+}
+.nameEmail {
+  display: flex;
+  margin-bottom: 25px;
+  gap: 16px;
+  justify-content: space-between;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.focusColor:focus {
+  border: 3px solid #F3BA00 !important;
+  box-shadow: none;
+}
+@media (max-width: 991px) {
+  .deliveryBoyimg {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 520px) {
+  .deliveryBoyimg {
+    width: 340px;
+    height: 276px;
+  }
+}
+@media (max-width:350px) {
+    .deliveryBoyimg {
+        width: 270px;
+        height: 206px;
+        margin-top: 30px;
+      }
+}

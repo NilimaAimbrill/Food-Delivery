@@ -1,0 +1,93 @@
+.headerMain {
+    background-color: #1AC073;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navBrand {
+  font-family: 'Squada One', cursive !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 32px !important;
+  line-height: 20px !important;
+  color: white !important;
+
+}
+
+.gapBetween{
+  gap: 40px !important;
+}
+.gapBetween a {
+  color: white !important;
+
+}
+
+.navContainer {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  
+}
+
+/* .headerMain .navbar {
+  padding: 0.5rem 0rem !important;
+} */
+/* .navbar {
+  padding: 8px 45px 8px 131px !important;
+} */
+.nav-link {
+  color: white !important;
+  font-family: 'SF Pro Text' !important;
+}
+.toggleButton {
+  order: 2 !important;
+}
+.navbar-toggler path {
+  color: white;
+}
+
+li.nav-item {
+  padding-right: 40px;
+}
+button.navbar-toggler.collapsed {
+  order: 3;
+}
+.navlinks {
+  justify-content: center;
+  font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+color: white !important;
+
+}
+.searchShopIcon1 {
+  margin-left: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+.searchShopIcon {
+  padding: 0px;
+}
+/* .navbar-nav li{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: white;
+} */
+.searchShopIcon {
+  list-style-type: none;
+display: flex;
+color: white;
+}
+.searchShopIcon path {
+  color:white
+}
+@media (max-width:375px) {
+  .searchShopIcon1 {
+    margin-right: 0px;
+  }
+}
