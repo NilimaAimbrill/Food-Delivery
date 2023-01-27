@@ -1,0 +1,59 @@
+.halfFields {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.focusColor {
+    padding: 20px 10px;
+}
+.focusColor:focus {
+    border: 3px solid #1AC073 !important;
+    box-shadow: none !important;
+}
+.allFrachiseHeadColor {
+    color: #1AC073;
+    font-family: 'Squada One', cursive !important;
+}
+.allFrachiseHeadColor:hover {
+    color: #F3BA00;
+}
+.allFrachiseLeft {
+    text-align: left;
+}
+.allFrachiseRightHead {
+    text-align: left;
+    margin-bottom: 25px;
+}
+.allFrachiseBoth {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'SF Pro Text' !important;
+}
+.franchiseEnquirySubmit {
+    margin-top: 25px;
+    background-color: #1AC073;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border-color: #1AC073;
+}
+.franchiseEnquirySubmit:hover {
+    background-color: #F3BA00;
+    border-color:#F3BA00;
+}
+@media (max-width:992px) {
+    .allFrachiseRightHead {
+        margin-top: 30px;
+    }
+}
+@media (max-width:426px) {
+    .halfFields {
+        display: block;
+        margin-bottom: 0px;
+    }
+    .focusColor {
+        margin-bottom: 25px;
+    }
+
+}
