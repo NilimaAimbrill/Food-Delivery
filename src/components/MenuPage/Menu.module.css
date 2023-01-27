@@ -1,0 +1,33 @@
+
+.carouselFlex {
+    display: flex;
+}
+.carouselItems {
+    padding: 50px 30px;
+}
+.menuCarousel {
+    color: white;
+    background-color: #1AC073 ;
+}
+.carouselItems img {
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+.carouselFlex h5 {
+    margin-top: 20px;
+}
+.orderNowBtn{
+    background-color: #F3BA00 !important;
+    color: white;
+    padding: 7px 40px;
+    border-color: #F3BA00;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.popularDishesHeading {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.cardMarginBottom {
+    margin-bottom: 30px;
+}

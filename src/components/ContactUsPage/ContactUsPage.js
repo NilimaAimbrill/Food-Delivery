@@ -12,7 +12,6 @@ import Footer from '../HomePage/Footer/Footer';
 export const ContactUsPage = () => {
     return (
         <>
-            <Header />
             <div className={styles.mainContactPage}>
                 <Container>
                     <div className={styles.headParaContact}>
@@ -55,7 +54,6 @@ export const ContactUsPage = () => {
                     </div>
                 </Container>
             </div>
-            <Footer />
         </>
     )
 }
