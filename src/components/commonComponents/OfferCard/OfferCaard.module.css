@@ -1,0 +1,38 @@
+.offerCardMain {
+    display: flex;
+    
+}
+.offerCardMain img {
+    border-bottom-right-radius: 7px;
+}
+.mainOfferCard {
+    margin-bottom: 35px;
+}
+.offerCardBody {
+    margin: auto !important;
+}
+.offerAvailBtn {
+    background-color: #1ac073;
+    border-color: #1ac073;
+} 
+.offerCardTitle {
+    font-size: 55px;
+    color: #f3ba00;
+}
+.offerAvailBtn:hover{
+    background-color: #f3ba00;
+    border-color: #f3ba00;
+}
+@media (max-width:426px) {
+    .offerCardMain img {
+        width: 200px;
+    }
+
+}
+@media (max-width:350px){
+    .offerCardMain img {
+        width: 170px;
+        height: 373px;
+    }
+
+}

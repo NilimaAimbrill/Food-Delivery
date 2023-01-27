@@ -7,6 +7,7 @@ import Menu from './components/MenuPage/Menu'
 import Header from './components/HomePage/Header/Header';
 import Footer from './components/HomePage/Footer/Footer';
 import FranchiseEnquiry from './components/FranchiseEnquiryPage/FranchiseEnquiry';
+import Offer from './components/OffersPage/Offer';
 // import {QueryClient,QueryClientProvider} from "@tanstack/react-query"
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/contact' element={<ContactUsPage />} />
           <Route path='/menu' element={<Menu />} />
           <Route path='/franchiseEnquiry' element={<FranchiseEnquiry />} />
+          <Route path='/offer' element={<Offer />} />
         </Routes>
         <Footer />
       </BrowserRouter>

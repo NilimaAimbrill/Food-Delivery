@@ -6,12 +6,12 @@ import Contact from './HomePage/ContectUs/Contact'
 
 function Home() {
   return (
-    <div>
+    <>
         <HeroSection />
         <HomeKitchen />
         <OurBlog />
         <Contact />
-    </div>
+    </>
   )
 }
 

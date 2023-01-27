@@ -33,38 +33,29 @@ function HomeKitchen() {
                 <div className={styles.allCards}>
                     <Row>
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                            <CommonCard img={img1} />
+                            <CommonCard img={img1}/>
                         </Col>
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
                             <CommonCard img={img2} />
                         </Col>
-
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
 
                             <CommonCard img={img3} />
                         </Col>
-
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
 
                             <CommonCard img={img4} />
                         </Col>
-
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
                             <CommonCard img={img5} />
                         </Col>
-
-
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
                             <CommonCard img={img6} />
                         </Col>
-
-
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
                             <CommonCard img={img7} />
                         </Col>
-
                         <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-
                             <CommonCard img={img8} />
                         </Col>
 

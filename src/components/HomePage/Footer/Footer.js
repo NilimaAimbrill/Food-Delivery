@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -16,11 +17,11 @@ function Footer() {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"  className={styles.toggleButton}  />
                         <Navbar.Collapse id="responsive-navbar-nav" className={styles.navlinks}>
                             <Nav className={styles.gapBetween}>
-                                <Nav.Link className={styles.active} href="#Home">Home</Nav.Link>
-                                <Nav.Link href="#About">About</Nav.Link>
-                                <Nav.Link href="#Menu">Menu</Nav.Link>
-                                <Nav.Link href="#Blog">Blog</Nav.Link>
-                                <Nav.Link href="#Contact">Contact</Nav.Link>
+                            <Nav.Link  as={Link} to="/" className={styles.active}>Home</Nav.Link>
+                            <Nav.Link as={Link} to="/offer">Offers</Nav.Link>
+                            <Nav.Link as={Link} to="/franchiseEnquiry">Franchise Enquiry</Nav.Link>
+                            <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
+                            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                         <div className={styles.searchShopIconMain}>
