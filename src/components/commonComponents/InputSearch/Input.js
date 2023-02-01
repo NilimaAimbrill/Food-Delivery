@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './input.module.css'
-import Button from 'react-bootstrap/Button';
+import Button from '@mui/material/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Input() {
     return (
@@ -13,9 +14,7 @@ function Input() {
                     placeholder="Search food you love"
                     aria-describedby="basic-addon2"
                 />
-                <Button id="button-addon2" className={styles.searchButton}>
-                    Search
-                </Button>
+                <Button className={styles.searchButton} endIcon={<SearchIcon/>}></Button>
             </InputGroup>
         </div>
     )

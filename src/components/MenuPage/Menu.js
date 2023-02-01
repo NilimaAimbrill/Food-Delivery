@@ -7,17 +7,8 @@ import LoadMore from '../commonComponents/LoadMore/LoadMore'
 import banner1 from '../images/banner1.jpg'
 import banner2 from '../images/banner2.jpg'
 import banner3 from '../images/banner3.jpg'
-import img1 from '../images/1.png'
-import img2 from '../images/2.png'
-import img3 from '../images/3.png'
-import img4 from '../images/4.png'
-import img5 from '../images/5.png'
-import img6 from '../images/6.png'
-import img7 from '../images/7.png'
-import img8 from '../images/8.png'
-import Header from '../HomePage/Header/Header';
 import Button from 'react-bootstrap/Button';
-import Footer from '../HomePage/Footer/Footer';
+import cardDetail from '../HomePage/HomeKitchen/CardContent'
 
 function Menu() {
 
@@ -95,42 +86,11 @@ function Menu() {
               <div className={styles.dishesCard}>
                 <div className={styles.allCards}>
                   <Row>
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                      <CommonCard img={img1} />
-                    </Col>
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                      <CommonCard img={img2} />
-                    </Col>
-
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-
-                      <CommonCard img={img3} />
-                    </Col>
-
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-
-                      <CommonCard img={img4} />
-                    </Col>
-
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                      <CommonCard img={img5} />
-                    </Col>
-
-
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                      <CommonCard img={img6} />
-                    </Col>
-
-
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                      <CommonCard img={img7} />
-                    </Col>
-
-                    <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-
-                      <CommonCard img={img8} />
-                    </Col>
-
+                    {cardDetail.map(details => (
+                      <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
+                        <CommonCard key={details.id} {...details} />
+                      </Col>
+                    ))}
                   </Row>
                   <LoadMore />
 

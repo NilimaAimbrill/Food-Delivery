@@ -12,18 +12,27 @@
 .searchInput input {
   padding-left: 10px;
 }
+.searchInput input:focus{
+  box-shadow: none;
+  border: 2px solid var(--yellowish-color);
+}
 .searchButton {
-  background: #f3ba00;
-  color: white;
+  background: var(--yellowish-color) !important;
+  color: white !important;
   padding: 0px 28px;
-  border-color: #f3ba00;
+  border-color: var(--yellowish-color);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.searchButton span {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
 .searchButton:hover {
-  background: #1AC073;
-  color: white;
-  border-color:#f3ba00 ;
+  background: var(--greenish-color) !important;
+  color: white !important;
+  border-color:var(--yellowish-color) !important;
 }
 .input-group {
   width: 398px;

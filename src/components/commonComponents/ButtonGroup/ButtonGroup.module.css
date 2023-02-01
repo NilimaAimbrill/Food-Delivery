@@ -1,9 +1,9 @@
 .button0 {
-    background-color: #F3BA00;
+    background-color: var(--yellowish-color);
     border-radius: 10px 0px 0px 10px;
 }
 .button1 {
-    border: 1px solid #F3BA00;
+    border: 1px solid var(--yellowish-color);
     padding: 13px 40px;
     font-family: 'SF Pro Text';
     font-size: 16px;
@@ -17,10 +17,11 @@
 }
 
 .button1:hover {
-    background-color: #1AC073 !important;
-    border-color:#1AC073 !important;
+    background-color: var(--greenish-color) !important;
+    border-color:var(--greenish-color) !important;
     color: white !important;
 }    
+
 @media only screen and (min-width: 360px) and (max-width: 722px) {
     .button1 {
         padding: 0px 20px;

@@ -6,22 +6,23 @@ import Card from 'react-bootstrap/Card';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 
 function CommonCard(props) {
+    const {img,pizzaName,pizzaPrice,time,stars}=props
     return (
         <div>
             <Card className={styles.card}>
-                <Card.Img className={styles.cardImage} variant="top" src={props.img} />
+                <Card.Img className={styles.cardImage} variant="top" src={img} />
                 <Card.Body className={styles.myCardBody}>
                     <Card.Text className={styles.cardBodyHead}>
-                        <h5 className={styles.cardHeading}>Home made pizza</h5>
-                        <h5 className={styles.cardHeading}>$19</h5>
+                        <h5 className={styles.cardHeading}>{pizzaName}</h5>
+                        <h5 className={styles.cardHeading}>{pizzaPrice}</h5>
                     </Card.Text>
                     <div className={styles.rating}>
                         <div className={styles.buttonRate}>
                             <Button startIcon={<StarIcon className={styles.starIcon} />}>
-                                4.7
+                                {stars}
                             </Button>
                             <Button>
-                                50-79 min
+                                {time}
                             </Button>
                         </div>
                         <div className={styles.addIcon}>

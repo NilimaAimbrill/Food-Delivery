@@ -1,0 +1,54 @@
+.modalForm input{
+    margin-bottom: 30px;
+    padding: 25px 10px;
+}
+.inputFields input:focus {
+    box-shadow: none !important;
+}
+.loginButton{
+    text-align: center;
+}
+.signUpHeading:hover{
+    color: var(--yellowish-color);
+}
+.signupButton button {
+    background-color:var(--yellowish-color);
+    border-color: var(--yellowish-color);
+    border-radius: 30px;
+    padding: 10px 50px;
+}
+
+.signupButton button:hover {
+    background-color:var(--greenish-color);
+    border-color: var(--greenish-color);
+}
+.signupButton button:focus {
+    border: 2px solid var(--yellowish-color) !important;
+    box-shadow: none !important;
+}
+.modalFooterText {
+    margin: auto;
+}
+.openSignUpModalBtn {
+    color: var(--greenish-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.inputFields{
+    margin-bottom: 20px;
+}
+.signupButton {
+    text-align: center;
+}
+.signUpModalFooter span {
+    color: var(--greenish-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.signUpModalFooter p{
+    margin: auto;
+} 
+form p{
+    color: red;
+    font-size: 12px;
+}

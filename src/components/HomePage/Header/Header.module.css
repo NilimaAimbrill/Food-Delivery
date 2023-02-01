@@ -1,8 +1,8 @@
 .headerMain {
-    background-color: #1AC073;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  background-color: var(--greenish-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navBrand {
@@ -14,9 +14,11 @@
   color: white !important;
 
 }
-.gapBetween{
+
+.gapBetween {
   gap: 40px !important;
 }
+
 .gapBetween a {
   color: white !important;
 
@@ -25,7 +27,7 @@
 .navContainer {
   padding-left: 15px !important;
   padding-right: 15px !important;
-  
+
 }
 
 /* .headerMain .navbar {
@@ -42,6 +44,7 @@
 .toggleButton {
   order: 2 !important;
 }
+
 .navbar-toggler path {
   color: white;
 }
@@ -49,20 +52,23 @@
 li.nav-item {
   padding-right: 40px;
 }
+
 button.navbar-toggler.collapsed {
   order: 3;
 }
+
 .navlinks {
   justify-content: center;
   font-weight: 400;
-font-size: 18px;
-line-height: 20px;
-color: white !important;
+  font-size: 18px;
+  line-height: 20px;
+  color: white !important;
 
 }
+
 .searchShopIcon1 {
   margin-left: 25px;
-  margin-top: 10px;
+  margin-top: 15px;
   cursor: pointer;
 
 }
@@ -70,6 +76,7 @@ color: white !important;
 .searchShopIcon {
   padding: 0px;
 }
+
 /* .navbar-nav li{
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -80,12 +87,21 @@ color: white !important;
 } */
 .searchShopIcon {
   list-style-type: none;
-display: flex;
-color: white;
+  display: flex;
+  color: white;
 }
+
 .searchShopIcon path {
-  color:white
+  color: white
 }
+
+.toggleButton span{
+  width: 1rem !important;
+  margin-top: -6px !important;
+  height: 1rem !important;
+  color: white !important;
+}
+
 @media (max-width:375px) {
   .searchShopIcon1 {
     margin-right: 0px;

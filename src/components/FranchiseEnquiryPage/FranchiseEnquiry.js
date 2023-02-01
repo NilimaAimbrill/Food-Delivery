@@ -1,7 +1,9 @@
 import React from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import {Col, Container, Row } from 'react-bootstrap'
 import styles from './FranchiseEnquiry.module.css'
 import Form from 'react-bootstrap/Form';
+import Button from '@mui/material/Button';
+import ForumIcon from '@mui/icons-material/Forum';
 
 
 function FranchiseEnquiry() {
@@ -52,7 +54,7 @@ function FranchiseEnquiry() {
                                 <div className="mb-3">
                                     <Form.Control className={styles.focusColor} as="textarea" placeholder='Your message' rows={9} />
                                 </div>
-                                <Button type='submit' className={styles.franchiseEnquirySubmit}>Send Message</Button>
+                                <Button type='submit' className={styles.franchiseEnquirySubmit} endIcon={<ForumIcon />}>Send Message</Button>
                             </form>
                         </Col>
                     </Row>

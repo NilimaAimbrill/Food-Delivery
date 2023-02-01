@@ -12,16 +12,16 @@
     margin: auto !important;
 }
 .offerAvailBtn {
-    background-color: #1ac073;
-    border-color: #1ac073;
+    background-color: var(--greenish-color);
+    border-color: var(--greenish-color);
 } 
 .offerCardTitle {
     font-size: 55px;
-    color: #f3ba00;
+    color: var(--yellowish-color);
 }
 .offerAvailBtn:hover{
-    background-color: #f3ba00;
-    border-color: #f3ba00;
+    background-color: var(--yellowish-color);
+    border-color: var(--yellowish-color);
 }
 @media (max-width:426px) {
     .offerCardMain img {

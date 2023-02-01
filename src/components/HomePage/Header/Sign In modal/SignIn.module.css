@@ -1,0 +1,30 @@
+.modalForm input{
+    margin-bottom: 20px;
+    padding: 25px 10px;
+}
+.modalForm input:focus {
+    border: 2px solid var(--greenish-color) !important;
+    box-shadow: none !important;
+}
+.loginButton{
+    text-align: center;
+}
+.loginButton button {
+    background-color:var(--yellowish-color);
+    border-color: var(--yellowish-color);
+    border-radius: 30px;
+    padding: 10px 50px;
+}
+
+.loginButton button:hover {
+    background-color:var(--greenish-color);
+    border-color: var(--greenish-color);
+}
+.modalFooterText {
+    margin: auto;
+}
+.openSignUpModalBtn {
+    color: var(--greenish-color);
+    cursor: pointer;
+    text-decoration: underline;
+}

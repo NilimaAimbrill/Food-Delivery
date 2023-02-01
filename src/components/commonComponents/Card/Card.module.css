@@ -11,10 +11,10 @@
     cursor: pointer;
 }
 .addBoxIcon path:hover {
-    color: #1AC073;
+    color: var(--greenish-color);
 }
 .starIcon path:hover{
-    color: #f3ba00;
+    color: var(--yellowish-color);
 }
 .cardBodyHead {
   display: flex;
@@ -45,7 +45,7 @@
   border-radius: 5px;
 }
 .addIcon path {
-  color: #f3ba00;
+  color: var(--yellowish-color);
 }
 .addIcon {
   cursor: pointer;

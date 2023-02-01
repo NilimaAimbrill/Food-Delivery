@@ -1,5 +1,5 @@
 .footerMain {
-  background-color: #1ac073;
+  background-color: var(--greenish-color);
   padding-bottom: 12px;
 }
 .searchShopIcon1 {

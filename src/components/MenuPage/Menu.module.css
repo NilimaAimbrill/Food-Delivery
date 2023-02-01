@@ -7,7 +7,7 @@
 }
 .menuCarousel {
     color: white;
-    background-color: #1AC073 ;
+    background-color: var(--greenish-color) ;
 }
 .carouselItems img {
     border-bottom-left-radius: 60px;
@@ -17,10 +17,10 @@
     margin-top: 20px;
 }
 .orderNowBtn{
-    background-color: #F3BA00 !important;
+    background-color: var(--yellowish-color) !important;
     color: white;
     padding: 7px 40px;
-    border-color: #F3BA00;
+    border-color: var(--yellowish-color);
     border-radius: 20px;
     margin-bottom: 30px;
 }

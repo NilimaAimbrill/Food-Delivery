@@ -11,6 +11,7 @@
   color: #000000;
   margin-bottom: 16px;
 }
+
 .AllHomeKitchen {
   text-align: left;
 }
@@ -24,14 +25,14 @@
   color: #929292;
   border: 1px solid #929292;
 }
-.buttonMargin * {
-  border-radius: 20px;
-  background-color: #F3BA00 ;
+/* .buttonMargin * {
+  border-radius: 80px;
+  background-color: var(--yellowish-color) ;
   color: white;
-}
+} */
 
 .buttonMargin:focus {
-  border: 3px solid #F3BA00 !important;
+  border: 3px solid var(--yellowish-color) !important;
   box-shadow: none !important;
 }
 .cardMarginBottom {
