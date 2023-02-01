@@ -1,0 +1,37 @@
+.mainCategoris .card {
+    width:180px;
+    height: 220px !important;
+    cursor: pointer;
+}
+
+.mainCategoris li{
+    width: 180px !important;
+    height: 220px !important;
+}
+.mainCategoris ul {
+    gap:10px;
+}
+.card p {
+    text-align:center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.mainCategoris {
+    margin-bottom: 25px;
+}
+.mainCategoris  {
+    margin-bottom: 70px;
+}
+.card img {
+    border-radius: 100% !important;
+    height: 140px;
+    padding: 15px 15px 0px 15px;
+}
+.card div {
+    width: 180px !important;
+    height: 220px !important;
+    justify-content: space-evenly;
+    background-color: var(--greenish-color);
+
+}
