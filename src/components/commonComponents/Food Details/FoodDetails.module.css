@@ -1,0 +1,29 @@
+.foodDetailsContent {
+    text-align: left;
+}
+.detailPizzaNameStars {
+    display: flex;
+    justify-content: space-between;
+}
+.detailPizzaNameStars path {
+    color: var(--yellowish-color);
+}
+.detailPizzaNameStars svg {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.addToCartBtn {
+    padding: 10px 50px;
+    background-color: var(--yellowish-color);
+    border: 1px solid var(--yellowish-color);
+    border-radius: 30px;
+}
+.foodImage {
+    border-radius: 100%;
+}
+.foodDetailsImage {
+    margin: auto;
+}
+.foodDetailsContent {
+    
+}
