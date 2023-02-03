@@ -20,7 +20,7 @@ function Header() {
                         <Nav className={styles.gapBetween}>
                             <Nav.Link as={Link} to="/" className={styles.active}>Home</Nav.Link>
                             <Nav.Link as={Link} to="/offer">Offers</Nav.Link>
-                            <Nav.Link as={Link} to="/franchiseEnquiry">Franchise Enquiry</Nav.Link>
+                            <Nav.Link as={Link} to="/franchise_enquiry">Franchise Enquiry</Nav.Link>
                             <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                         </Nav>

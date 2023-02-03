@@ -7,10 +7,10 @@
 .focusColor {
     padding: 20px 10px;
 }
-.focusColor:focus {
+/* .focusColor:focus {
     border: 3px solid var(--greenish-color) !important;
     box-shadow: none !important;
-}
+} */
 .allFrachiseHeadColor {
     color: var(--greenish-color);
     font-family: 'Squada One', cursive !important;
@@ -43,6 +43,14 @@
     border-color:var(--yellowish-color) !important;
     color: white;
 }
+.textArea {
+    border-color: var(--greenish-color) !important;
+
+}
+.inputError {
+    display: block;
+    width: 50%;
+}
 @media (max-width:992px) {
     .allFrachiseRightHead {
         margin-top: 30px;
@@ -55,6 +63,9 @@
     }
     .focusColor {
         margin-bottom: 25px;
+    }
+    .inputError {
+        width: 100%;
     }
 
 }

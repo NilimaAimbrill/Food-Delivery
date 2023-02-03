@@ -6,8 +6,25 @@ import Form from 'react-bootstrap/Form';
 import delivery_boy from '../../images/delivery_boy.png'
 import styles from './Contact.module.css'
 import Button from 'react-bootstrap/Button';
+import { useForm } from "react-hook-form"
+import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup"
 
 function Contact() {
+    const schema = yup.object().shape({
+        name: yup.string().required("Your Name is required!"),
+        email: yup.string().email("Email contains @ and . signs!").required("Your Email is required!"),
+        message: yup.string().required("Your Message is required!"),
+
+    })
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    })
+
+    const onSubmit = (data) => {
+        console.log(data);
+
+    }
     return (
         <div className={styles.contactMain}>
             <Container>
@@ -17,13 +34,22 @@ function Contact() {
                             <h3>Do you have a question<br />
                                 or want to become a seller?</h3>
                             <p>Fill this form and our manager will contact you next 48 hours.</p>
-                            <form>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className={styles.nameEmail}>
-                                    <Form.Control className={styles.focusColor} type="email" placeholder="Your Name" />
-                                    <Form.Control className={styles.focusColor} type="email" placeholder="Your email" />
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.name?.message ? "red" : "#1AC073" }} type="text" placeholder="Your Name" {...register("name")} />
+                                        <p>{errors.name?.message}</p>
+                                    </div>
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.email?.message ? "red" : "#1AC073" }} type="email" placeholder="Your email" {...register("email")} />
+                                        <p>{errors.email?.message}</p>
+                                    </div>
+
                                 </div>
                                 <div className="mb-3">
-                                    <Form.Control className={styles.focusColor} as="textarea" placeholder='Your message' rows={9} />
+                                    <Form.Control className={styles.focusColor} style={{ borderColor: errors.message?.message ? "red" : "#1AC073" }} as="textarea" placeholder='Your message' rows={9} {...register("message")} />
+                                    <p>{errors.message?.message}</p>
+
                                 </div>
                                 <div className={styles.submitBtn}>
                                     <Button type='submit'>Submit</Button>

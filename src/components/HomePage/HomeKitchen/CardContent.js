@@ -8,14 +8,9 @@ import img7 from '../../images/7.png'
 import img8 from '../../images/8.png'
 
 var cardDetail = [
+    
     {
-        img:[img1],
-        pizzaName:'Cheese Pizza',
-        pizzaPrice:"$29",
-        stars:"4.1",
-        time:"30-40 min"
-    },
-    {
+        id: "1",
         img:[img2],
         pizzaName:'Veggie Pizza',
         pizzaPrice:"$19",
@@ -23,6 +18,7 @@ var cardDetail = [
         time:"30-40 min"
     },
     {
+        id: "2",
         img:[img3],
         pizzaName:'Pepperoni Pizza',
         pizzaPrice:"$39",
@@ -30,6 +26,7 @@ var cardDetail = [
         time:"30-40 min"
     },
     {
+        id: "3",
         img:[img4],
         pizzaName:'Margherita Pizza',
         pizzaPrice:"$49",
@@ -37,6 +34,7 @@ var cardDetail = [
         time:"30-40 min"
     },
     {
+        id: "4",
         img:[img5],
         pizzaName:'Hawaiian Pizza',
         pizzaPrice:"$59",
@@ -44,13 +42,15 @@ var cardDetail = [
         time:"30-40 min"
     },
     {
-        img:[img5],
-        pizzaName:'Farmhouse Pizza',
-        pizzaPrice:"$69",
-        stars:"4.0",
+        id: "5",
+        img:[img1],
+        pizzaName:'Cheese Pizza',
+        pizzaPrice:"$29",
+        stars:"4.1",
         time:"30-40 min"
     },
     {
+        id: "6",
         img:[img6],
         pizzaName:'Aussie Pizza',
         pizzaPrice:"$69",
@@ -58,6 +58,7 @@ var cardDetail = [
         time:"30-40 min"
     },
     {
+        id: "7",
         img:[img7],
         pizzaName:'Cheese N Corn Pizza',
         pizzaPrice:"$79",
@@ -65,6 +66,7 @@ var cardDetail = [
         time:"30-40 min"
     },
     {
+        id: "8",
         img:[img8],
         pizzaName:'BBQ Chicken Pizza',
         pizzaPrice:"$19",

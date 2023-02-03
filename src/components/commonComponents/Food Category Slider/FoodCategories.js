@@ -35,25 +35,6 @@ function FoodCategories({ data }) {
     };
     return (
         <div>
-            {/* <Carousel>
-                {
-                    (!data) ? "not found" : data.map(item => {
-                        return (
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={item.strCategoryThumb}
-                                    alt="First slide"
-                                />
-                                <Carousel.Caption>
-                                    <h3>{item.strCategory}</h3>
-                                    <p>{item.strCategoryDescription}</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        )
-                    })
-                }
-            </Carousel> */}
             <div className={styles.mainCategoris}>
                 <Carousel infinite={Boolean} responsive={responsive}>
                     {
@@ -61,7 +42,7 @@ function FoodCategories({ data }) {
                             return (
                                 <div className={styles.card}>
                                     <div className='card'>
-                                        <img src={item.strCategoryThumb} alt='img' />
+                                        <img className={styles.sliderImage} src={item.strCategoryThumb} alt='img' />
                                         <p>{item.strCategory}</p>
                                     </div>
                                 </div>

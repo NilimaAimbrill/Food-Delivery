@@ -7,8 +7,12 @@
   letter-spacing: -0.012em !important;
   color: #1b1c21 !important;
 }
+.card h5 {
+  color: black;
+}
 .cardImage {
     cursor: pointer;
+    transition: transform 1s;
 }
 .addBoxIcon path:hover {
     color: var(--greenish-color);
@@ -16,6 +20,10 @@
 .starIcon path:hover{
     color: var(--yellowish-color);
 }
+.cardImage:hover {
+  transform: scale(0.9)
+}
+
 .cardBodyHead {
   display: flex;
   justify-content: space-between;
@@ -49,4 +57,12 @@
 }
 .addIcon {
   cursor: pointer;
+}
+.card {
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+}
+.card:hover {
+  text-decoration: none ;
 }

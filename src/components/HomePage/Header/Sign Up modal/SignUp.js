@@ -43,6 +43,7 @@ function SignUp(props) {
     }
     const [validated, setValidated] = useState(false);
 
+
     return (
         <>
             <div className="container">
@@ -55,7 +56,7 @@ function SignUp(props) {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter" className={styles.signUpHeading}>
-                            SignUp
+                            {currentScreen !== SignUp ? "SignIn" : "SignUp"}
                         </Modal.Title>
 
                     </Modal.Header>
@@ -82,12 +83,12 @@ function SignUp(props) {
                             }
 
                             <div className={styles.signupButton}>
-                                <Button type="submit" >Sign Up</Button>
+                                <Button type="submit" >{currentScreen === SignUp ? "SignIn" : "SignUp" }</Button>
                             </div>
                         </form>
                     </Modal.Body>
                     <Modal.Footer className={styles.signUpModalFooter}>
-                        <p>Already have an account? <span onClick={() => setCurrentScreen("SIGNIN")}>Sign In</span> here!</p>
+                        <p>Already have an account? <span onClick={() => setCurrentScreen("SIGNIN")}>{currentScreen === SignUp ? "Sign Up" : "Sign In"}</span> here!</p>
                     </Modal.Footer>
                 </Modal>
             </div>

@@ -51,7 +51,7 @@ export const ContactUsPage = () => {
                                 <ContactCard icon={<EmailIcon className='ContactIcon' />} heading="Email" para="Aimbrill@gmail.com" />
                             </Col>
                             <Col lg={4} xl={4} xxl={4} md={4} >
-                                <ContactCard icon={<PhoneAndroidIcon className='ContactIcon' />} heading="Phone" para="9696969696" />
+                                <ContactCard icon={<PhoneAndroidIcon className='ContactIcon' />} heading="Phone" para="+91 9696969696" />
                             </Col>
                         </Row>
                     </div>

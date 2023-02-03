@@ -13,7 +13,6 @@
   padding-top: 19px !important;
   padding-bottom: 19px !important;
   border-radius: 10px;
-  border: none;
 }
 .contactContent h3 {
   margin-top: 100px;
@@ -36,7 +35,6 @@
 }
 .nameEmail {
   display: flex;
-  margin-bottom: 25px;
   gap: 16px;
   justify-content: space-between;
   font-family: 'SF Pro Text';
@@ -49,15 +47,26 @@
   text-align: center;
   margin-top: 25px;
 }
+.inputError {
+  display: block;
+  width: 50%;
+}
 .submitBtn button {
   background-color: var(--greenish-color);
   border-radius: 30px;
   padding: 10px 35px;
   border-color: var(--greenish-color);
 }
-.focusColor:focus {
+.submitBtn button:hover{
+  background-color: var(--yellowish-color);
+  border-color: var(--yellowish-color);
+}
+/* .focusColor:focus {
   border: 3px solid var(--yellowish-color) !important;
   box-shadow: none;
+} */
+.allContact input {
+  border: 1px solid var(--greenish-color);
 }
 @media (max-width: 991px) {
   .deliveryBoyimg {

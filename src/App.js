@@ -19,14 +19,14 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Header />
-        {/* <Routes>
+        <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<ContactUsPage />} />
           <Route path='/menu' element={<Menu />} />
-          <Route path='/franchiseEnquiry' element={<FranchiseEnquiry />} />
+          <Route path='/franchise_enquiry' element={<FranchiseEnquiry />} />
           <Route path='/offer' element={<Offer />} />
-        </Routes> */}
-        <FoodDetails />
+          <Route path='/food_details/:productId' element={<FoodDetails />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </div>

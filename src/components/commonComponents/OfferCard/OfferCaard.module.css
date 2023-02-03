@@ -4,6 +4,10 @@
 }
 .offerCardMain img {
     border-bottom-right-radius: 7px;
+    transition: transform 1s;
+}
+.offerCardMain img:hover {
+  transform: scale(0.9)
 }
 .mainOfferCard {
     margin-bottom: 35px;

@@ -1,12 +1,30 @@
 import React from 'react'
-import {Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import styles from './FranchiseEnquiry.module.css'
 import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 import ForumIcon from '@mui/icons-material/Forum';
-
+import { useForm } from "react-hook-form"
+import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup"
 
 function FranchiseEnquiry() {
+    const schema = yup.object().shape({
+        fname: yup.string().required("Your first Name is required!"),
+        email: yup.string().email("Email contains @ and . signs!").required("Your Email is required!"),
+        state: yup.string().required("Your state is required!"),
+        city: yup.string().required("Your state is required!"),
+        number: yup.number().positive().integer().required("Your Phone number is required!"),
+
+    })
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    })
+
+    const onSubmit = (data) => {
+        console.log(data);
+
+    }
     return (
         <div className={styles.franchiseEnquiryMain}>
             <div className={styles.allFrachise} >
@@ -38,21 +56,40 @@ function FranchiseEnquiry() {
                             <div className={styles.allFrachiseRightHead}>
                                 <h6><b>Share Your Details</b></h6>
                             </div>
-                            <form>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className={styles.halfFields}>
-                                    <Form.Control className={styles.focusColor} type="text" placeholder="First Name" />
-                                    <Form.Control className={styles.focusColor} type="text" placeholder="Last Name" />
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.fname?.message ? "red" : "#1AC073" }} type="text" placeholder="First Name"  {...register("fname")} />
+                                        <p>{errors.fname?.message}</p>
+                                    </div>
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.lname?.message ? "red" : "#1AC073" }} type="text" placeholder="Last Name"  {...register("lname")} />
+                                        <p>{errors.lname?.message}</p>
+                                    </div>
+
                                 </div>
                                 <div className={styles.halfFields}>
-                                    <Form.Control className={styles.focusColor} type="email" placeholder="Your Email" />
-                                    <Form.Control className={styles.focusColor} type="tel" placeholder="Your Phone Number" />
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.email?.message ? "red" : "#1AC073" }} type="email" placeholder="Your Email"  {...register("email")} />
+                                        <p>{errors.email?.message}</p>
+                                    </div>
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.number?.message ? "red" : "#1AC073" }} type="tel" placeholder="Your Phone Number"  {...register("number")} />
+                                        <p>{errors.number?.message}</p>
+                                    </div>
                                 </div>
                                 <div className={styles.halfFields}>
-                                    <Form.Control className={styles.focusColor} type="text" placeholder="Your State" />
-                                    <Form.Control className={styles.focusColor} type="text" placeholder="Your City" />
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.state?.message ? "red" : "#1AC073" }} type="text" placeholder="Your State"  {...register("state")} />
+                                        <p>{errors.state?.message}</p>
+                                    </div>
+                                    <div className={styles.inputError}>
+                                        <Form.Control className={styles.focusColor} style={{ borderColor: errors.city?.message ? "red" : "#1AC073" }} type="text" placeholder="Your City"  {...register("city")} />
+                                        <p>{errors.city?.message}</p>
+                                    </div>
                                 </div>
                                 <div className="mb-3">
-                                    <Form.Control className={styles.focusColor} as="textarea" placeholder='Your message' rows={9} />
+                                    <Form.Control className={styles.textArea} as="textarea" placeholder='Your message' rows={9}  {...register("message")} />
                                 </div>
                                 <Button type='submit' className={styles.franchiseEnquirySubmit} endIcon={<ForumIcon />}>Send Message</Button>
                             </form>

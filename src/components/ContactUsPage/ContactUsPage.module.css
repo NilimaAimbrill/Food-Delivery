@@ -2,6 +2,10 @@
     margin-top: 20px;
     font-size: 60px;
     color: var(--greenish-color);
+    transition: transform 1s;
+}
+.contactInfoCard svg:hover {
+    transform: scale(0.9)
 }
 .headParaContact {
     padding-top: 40px;
@@ -46,6 +50,8 @@
 form p{
     color: red;
     font-size: 12px;
+    text-align: left;
+    text-transform: lowercase;
 }
 .focusTextArea:focus {
     border: 2px solid var(--greenish-color) !important;

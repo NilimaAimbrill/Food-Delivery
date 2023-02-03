@@ -35,3 +35,10 @@
     background-color: var(--greenish-color);
 
 }
+.sliderImage {
+    cursor: pointer;
+    transition: transform 1s;
+}
+.sliderImage:hover {
+    transform: scale(0.9)
+}
