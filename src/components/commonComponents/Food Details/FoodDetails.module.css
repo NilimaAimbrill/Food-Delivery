@@ -1,29 +1,42 @@
 .foodDetailsContent {
   text-align: left;
+  font-family: 'Gilroy-Medium' ;
 }
 .detailPizzaNameStars {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .detailPizzaNameStars path {
-  color: var(--yellowish-color);
+  color: var(--greenish-color);
 }
 .detailPizzaNameStars svg {
   margin-bottom: 10px;
   font-size: 35px;
+  border: 1px solid var(--greenish-color);
+  border-radius: 100%;
+  padding: 3px;
 }
-.detailPizzaNameStars h1,
-h3,
-h6 {
+.detailPizzaNameStars h1 {
   font-family: 'Squada One', cursive !important;
+  font-size: 80px;
+}
+.detailPizzaNameStars h3,h6 {
   letter-spacing: 2px;
+}
+.detailPizzaNameStars h3,
+h6 {
+  font-size: 26px;
+}
+.heartIcon {
+  margin: auto 0px;
 }
 .addToCartBtn {
   padding: 10px 50px;
   background-color: var(--yellowish-color);
   border: 1px solid var(--yellowish-color);
-  border-radius: 30px;
-  font-size: 16px;
+  border-radius: 7px;
+  font-size: 20px;
   margin-top: 10px;
   font-family: 'Squada One', cursive !important;
   transition: transform 1s;
@@ -33,27 +46,86 @@ h6 {
   border: 1px solid var(--greenish-color);
   transform: scale(0.9);
 }
-.detailPizzaNameStars svg:hover {
-  transform: rotate(180deg);
+.detailPizzaNameStars svg:hover{
+  padding: 5px;
 }
 .detailPizzaNameStars svg {
   transition: transform 0.7s ease-in-out;
 }
-.foodImage {
-  border-radius: 50%;
-  border: 5px double var(--yellowish-color);
-  padding: 10px;
-  transition: transform 1s;
-}
-.foodImage:hover {
-  border: 5px double var(--greenish-color);
-  padding: 15px;
-  transform: scale(1.2);
+.unitNumbers {
+  font-size: 20px;
 }
 .foodDetailsImage {
   margin: auto;
+  display: block;
 }
 .allFoodDetails {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+.boldTime {
+  font-family: 'Squada One', cursive !important;
+  letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: 100 !important;
+}
+.readmoreToggle span{
+  color: var(--greenish-color);
+  cursor: pointer;
+}
+.unitRating{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.unitRating button {
+  border-radius: 7px;
+  background-color: var(--greenish-color);
+  border: 1px solid var(--greenish-color);
+  padding: 4px 13px;
+  font-size: 20px;
+}
+.unitRating path:hover {
+  color: var(--yellowish-color);
+  
+}
+.unitRating p{
+  margin: auto 0;
+}
+.priceSale {
+  display: flex;
+  gap: 15px;
+}
+.cancelPrice {
+  text-decoration: line-through;
+  font-weight: 100 !important;
+  font-size: 18px;
+}
+.btnAvailableItem {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.btnAvailableItem p {
+  margin: auto 0;
+}
+.descriptionMargin {
+  margin-bottom: 30px;
+}
+.btnAvailableItem button {
+  margin-top: 0px !important;
+}
+.allContentRow {
+  margin-bottom: 10px;
+}
+.detailsProducts {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.detailsProducts p {
+  font-size: 18px;
+}
+/* .mainProductImage img {
+  height: 380px;
+} */

@@ -28,19 +28,25 @@
   display: flex;
   justify-content: space-between;
 }
+.myCardBody a {
+  text-decoration: none !important;
+}
 /* .card {
     width: 100%;
     height: 337px;
 } */
 .rating {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   font-family: 'SF Pro Text';
 }
-
+.esimatedTime {
+  text-transform: capitalize;
+} 
 .buttonRate {
   display: flex;
   gap: 8px;
+  justify-content: space-between;
   font-family: 'SF Pro Text';
 }
 .buttonRate button {

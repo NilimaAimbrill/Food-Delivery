@@ -8,6 +8,7 @@ import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import useFormPersist from 'react-hook-form-persist'
 import SignIn from "../Sign In modal/SignIn";
+import { CleaningServices } from "@mui/icons-material";
 
 
 function SignUp(props) {
@@ -33,15 +34,9 @@ function SignUp(props) {
 
     const onSubmit = (data) => {
         console.log(data);
+        localStorage.setItem("data", JSON.stringify(data));
         reset();
-
-
-        // setFullName('');
-        // setEmail('');
-        // setPassword('');
-        // setConfirmPassword('');
     }
-    const [validated, setValidated] = useState(false);
 
 
     return (
@@ -56,7 +51,7 @@ function SignUp(props) {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter" className={styles.signUpHeading}>
-                            {currentScreen !== SignUp ? "SignIn" : "SignUp"}
+                        {currentScreen === "SIGNUP" ? "Sign Up" : "Sign In" }
                         </Modal.Title>
 
                     </Modal.Header>
@@ -83,12 +78,12 @@ function SignUp(props) {
                             }
 
                             <div className={styles.signupButton}>
-                                <Button type="submit" >{currentScreen === SignUp ? "SignIn" : "SignUp" }</Button>
+                                <Button type="submit" >{currentScreen === "SIGNUP" ? "SignUp" : "SignIn" }</Button>
                             </div>
                         </form>
                     </Modal.Body>
                     <Modal.Footer className={styles.signUpModalFooter}>
-                        <p>Already have an account? <span onClick={() => setCurrentScreen("SIGNIN")}>{currentScreen === SignUp ? "Sign Up" : "Sign In"}</span> here!</p>
+                        <p>Already have an account? <span onClick={() => currentScreen === "SIGNUP" ? setCurrentScreen("SIGNIN"):setCurrentScreen("SIGNUP")}>{currentScreen === "SIGNUP" ? "Sign In" : "Sign Up"}</span> here!</p>
                     </Modal.Footer>
                 </Modal>
             </div>

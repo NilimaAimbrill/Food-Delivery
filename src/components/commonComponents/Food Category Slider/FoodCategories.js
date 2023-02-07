@@ -12,8 +12,9 @@ import img6 from '../../images/6.png'
 import img7 from '../../images/7.png'
 import img8 from '../../images/8.png'
 
+
 function FoodCategories({ data }) {
-    console.log(data)
+    // console.log(data)
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -42,7 +43,7 @@ function FoodCategories({ data }) {
                             return (
                                 <div className={styles.card}>
                                     <div className='card'>
-                                        <img className={styles.sliderImage} src={item.strCategoryThumb} alt='img' />
+                                        <img src={item.strCategoryThumb} alt='img' />
                                         <p>{item.strCategory}</p>
                                     </div>
                                 </div>

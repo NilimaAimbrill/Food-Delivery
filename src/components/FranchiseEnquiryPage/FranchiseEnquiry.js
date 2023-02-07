@@ -23,6 +23,7 @@ function FranchiseEnquiry() {
 
     const onSubmit = (data) => {
         console.log(data);
+        localStorage.setItem("data", JSON.stringify(data));
 
     }
     return (

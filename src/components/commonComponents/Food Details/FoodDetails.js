@@ -1,48 +1,89 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import StarIcon from '@mui/icons-material/Star';
 import Col from 'react-bootstrap/Col';
 import styles from './FoodDetails.module.css'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import {useParams} from "react-router-dom"
-import cardDetail from '../../HomePage/HomeKitchen/CardContent';
+import { useParams } from "react-router-dom"
+import axios from 'axios'
+import { CleaningServices } from '@mui/icons-material';
+import notAvailable from '../../images/no-image-icon-15.png'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ReadMoreToggle from '../ReadMoreButton/ReadMoreToggle';
+import ProductGallery from '../ProductGallery/ProductGallery';
+
+
+
 // import image1 from '../../images/1.png'
 
-function FoodDetails(props) {
+function FoodDetails() {
+
+    // const [loading, setLoading] = useState(false);
+    const [products, setProducts] = useState();
+    let { productId } = useParams();
+    console.log("productId", productId)
+    useEffect(() => {
+        // setLoading(true);
+        axios
+            .get(`https://mock.redq.io/api/products/${productId}`)
+            .then((response) => {
+                setProducts(response.data)
+                console.log("response", response)
+                // setLoading(false);
+            })
+            .catch((error) => console.log(error));
+    }, [productId]);
+    // const products = products.find(prod => prod.slug === productId)
     // const {img,pizzaName,pizzaPrice,time,stars}=props
-    const {productId} = useParams()
-    const thisProduct = cardDetail.find(prod => prod.id === productId)
+    console.log("products",)
+
     return (
         <div>
             <div className={styles.foodDetailsmain}>
                 <Container>
                     <div className={styles.allFoodDetails}>
-                        <Row>
+                        <Row className={styles.allContentRow}>
                             <Col md={12} lg={7} xl={6} className={styles.foodDetailsImage}>
-                                <img className={styles.foodImage} src={thisProduct.img} alt='foodImage' />
+                                <div className={styles.productGalleryImages}>
+                                    <ProductGallery />
+                                </div>
                             </Col>
                             <Col md={12} lg={5} xl={6} className={styles.foodDetailsContent}>
                                 <div className={styles.detailPizzaNameStars}>
-                                    <h1>{thisProduct.pizzaName}</h1>
-                                    <h1>{thisProduct.stars} <StarIcon /></h1>
+                                    <h1>{products?.name}</h1>
+                                    <div className={styles.heartIcon}><FavoriteBorderIcon /></div>
                                 </div>
                                 <div className={styles.foodContent}>
-                                    <h6><b>Content:</b></h6>
-                                    <p>tomato ketchup,tomato,onion,chilli flakes,baking powder,
-                                        processed cheese,mushroom,capsicum (green pepper),oregano,
-                                        mozzarella,dry yeast
-                                    </p>
-                                    <h6><b>Food Recipe:</b></h6>
-                                    <p>In large bowl, mix first 4 ingredients,<br />Mix water and oil; add to flour mixture,
-                                        <br />Turn onto floured surface; knead for 2 minutes.
-                                    </p>
-                                    <h3>{thisProduct.pizzaPrice}</h3>
-                                    <h6><b>Estimated time to delivery:</b> {thisProduct.time}</h6>
-                                    <button className={styles.addToCartBtn}>Add to cart <AddShoppingCartIcon /></button>
+                                    <div className={styles.unitRating}>
+                                        <p className={styles.unitNumbers}>{products?.unit}</p>
+                                        <button>{products?.ratings} <StarIcon /></button>
+                                    </div>
+                                    <div className={styles.descriptionMargin}>
+                                        <h6><b>Description:</b></h6>
+                                        {
+                                            products?.description &&
+                                            <ReadMoreToggle>{products?.description}</ReadMoreToggle>
+
+                                        }
+                                    </div>
+                                    <div className={styles.priceSale}>
+                                        <h6><b>${products?.sale_price}</b></h6>
+                                        <p className={styles.cancelPrice}>${products?.price}</p>
+                                    </div>
+                                    <div className={styles.btnAvailableItem}>
+                                        <button className={styles.addToCartBtn}>Add to cart <AddShoppingCartIcon /></button>
+                                        <p>{products?.quantity} pieces available</p>
+                                    </div>
                                 </div>
                             </Col>
                         </Row>
+                        <hr />
+                        <div className={styles.detailsProducts}>
+                            <h6>Details:</h6>
+                            <p>{products?.description}</p>
+                        </div>
+                        <hr />
                     </div>
                 </Container>
             </div>

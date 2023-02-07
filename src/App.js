@@ -10,6 +10,7 @@ import FranchiseEnquiry from './components/FranchiseEnquiryPage/FranchiseEnquiry
 import Offer from './components/OffersPage/Offer';
 import './variable.css';
 import FoodDetails from './components/commonComponents/Food Details/FoodDetails';
+import ProductGallery from './components/commonComponents/ProductGallery/ProductGallery';
 // import {QueryClient,QueryClientProvider} from "@tanstack/react-query"
 
 

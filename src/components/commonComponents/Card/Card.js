@@ -5,31 +5,29 @@ import StarIcon from '@mui/icons-material/Star';
 import Card from 'react-bootstrap/Card';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { Link } from 'react-router-dom';
+import Counter from '../CounterButton/Counter';
 
-
-function CommonCard(props) {
-    const {img,pizzaName,pizzaPrice,time,stars,id}=props
+function CommonCard(product) {
+    // const {img,pizzaName,pizzaPrice,time,stars}=props
     return (
         <div>
-            <Card as={Link} to={`/food_details/${id}`} className={styles.card}>
-                <Card.Img className={styles.cardImage} variant="top" src={img}/>
+            <Card className={styles.card}>
+                <Card.Img className={styles.cardImage} variant="top" src={product.image.thumbnail} />
                 <Card.Body className={styles.myCardBody}>
-                    <Card.Text className={styles.cardBodyHead}>
-                        <h5 className={styles.cardHeading}>{pizzaName}</h5>
-                        <h5 className={styles.cardHeading}>{pizzaPrice}</h5>
+                    <Card.Text as={Link} to={`/food_details/${product.slug}`} className={styles.cardBodyHead}>
+                        <h5 className={styles.cardHeading} >{product.name}</h5>
+                        <h5 className={styles.cardHeading}>${product.price}</h5>
                     </Card.Text>
                     <div className={styles.rating}>
                         <div className={styles.buttonRate}>
                             <Button startIcon={<StarIcon className={styles.starIcon} />}>
-                                {stars}
+                                {product.ratings}
                             </Button>
-                            <Button>
-                                {time}
-                            </Button>
+                            <div className={styles.esimatedTime}>
+                                <Counter />
+                            </div>
                         </div>
-                        <div className={styles.addIcon}>
-                            <AddBoxIcon className={styles.addBoxIcon}/>
-                        </div>
+
                     </div>
                 </Card.Body>
             </Card>
