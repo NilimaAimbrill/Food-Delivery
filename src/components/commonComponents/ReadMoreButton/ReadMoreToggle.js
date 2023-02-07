@@ -10,7 +10,7 @@ const ReadMoreToggle = ({children}) =>  {
     }
   return (
     <div className={styles.readMoreLess}>
-        {readMoreShown ? children: children.substr(0,120)}
+        {readMoreShown ? children: children.substr(0,200)}
         <span onClick={toggleButton}> {readMoreShown ? " Read less" : " ...Read more"}</span>
     </div>
   )

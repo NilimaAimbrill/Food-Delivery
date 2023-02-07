@@ -12,6 +12,7 @@ import notAvailable from '../../images/no-image-icon-15.png'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ReadMoreToggle from '../ReadMoreButton/ReadMoreToggle';
 import ProductGallery from '../ProductGallery/ProductGallery';
+import CommonCard from '../Card/Card';
 
 
 
@@ -84,6 +85,16 @@ function FoodDetails() {
                             <p>{products?.description}</p>
                         </div>
                         <hr />
+                        <div className={styles.relatedProductsMain}>
+                        <h1 className={styles.relatedHeading}>Related Products:</h1>
+                            <Row>
+                                {products?.related_products?.map(product => (
+                                    <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                        <CommonCard {...product} />
+                                    </Col>
+                                ))}
+                            </Row>
+                        </div>
                     </div>
                 </Container>
             </div>

@@ -129,3 +129,14 @@ h6 {
 /* .mainProductImage img {
   height: 380px;
 } */
+.relatedProductsMain {
+  margin-top: 40px;
+}
+
+.relatedHeading {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.cardMarginBottom {
+  margin-bottom: 40px;
+}
