@@ -37,7 +37,7 @@ export const ContactUsPage = () => {
     //   }, [formData]);
 
 
-    const onSubmit = (data) => {
+    const onContactUs = (data) => {
         console.log(data);
         // setFormData(data);
         localStorage.setItem('ContactData', JSON.stringify(data));
@@ -71,7 +71,7 @@ export const ContactUsPage = () => {
                             <b>Contact Us</b>
                         </div>
                         <div className={styles.contactFormInputs}>
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onContactUs)}>
                                 <Form.Group className={styles.inputFlex} controlId="exampleForm.ControlInput1">
                                     <div className={styles.allErrorInput}>
                                         <Form.Control className={styles.formInput} style={{ borderColor: errors.name?.message ? "red" : "#1AC073" }} type="text" placeholder="Name" {...register("name")}/>

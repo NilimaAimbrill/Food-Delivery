@@ -21,7 +21,7 @@ function FranchiseEnquiry() {
         resolver: yupResolver(schema),
     })
 
-    const onSubmit = (data) => {
+    const onEnquiry = (data) => {
         console.log(data);
         localStorage.setItem("FranchiseEnquiryData", JSON.stringify(data));
         reset();
@@ -57,7 +57,7 @@ function FranchiseEnquiry() {
                             <div className={styles.allFrachiseRightHead}>
                                 <h6><b>Share Your Details</b></h6>
                             </div>
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onEnquiry)}>
                                 <div className={styles.halfFields}>
                                     <div className={styles.inputError}>
                                         <Form.Control className={styles.focusColor} style={{ borderColor: errors.fname?.message ? "red" : "#1AC073" }} type="text" placeholder="First Name"  {...register("fname")} />

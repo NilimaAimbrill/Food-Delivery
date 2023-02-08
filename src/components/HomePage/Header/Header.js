@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useContext } from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import Container from 'react-bootstrap/Container';
@@ -8,9 +8,11 @@ import Tooltip from "@material-ui/core/Tooltip";
 import LoginIcon from '@mui/icons-material/Login';
 import SignUp from './Sign Up modal/SignUp'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+// import { LoginContext } from '../../../Contex/LogIn/LoginContext';
 
 function Header() {
     const [modalShow, setModalShow] = React.useState(false);
+
     return (
         <div className={styles.headerMain}>
             <Navbar collapseOnSelect expand="md" variant="dark">
@@ -29,9 +31,15 @@ function Header() {
                     <div className={styles.searchShopIconMain}>
                         <ul className={styles.searchShopIcon}>
                             <li className={styles.searchShopIcon1}>
-                                <Tooltip title='LogIn'>
-                                    <LoginIcon className='searchIcon' onClick={() => setModalShow(true)} />
-                                </Tooltip>
+                                {/* {isLoggedIn === true ? (
+                                    <Tooltip title='My cart'>
+                                        <ShoppingBagIcon className='searchIcon' />
+                                    </Tooltip>
+                                ) : ( */}
+                                    <Tooltip title='LogIn'>
+                                        <LoginIcon className='searchIcon' onClick={() => setModalShow(true)} />
+                                    </Tooltip>
+                                {/* )} */}
                             </li>
                         </ul>
                     </div>

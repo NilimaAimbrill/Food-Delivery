@@ -21,7 +21,7 @@ function Contact() {
         resolver: yupResolver(schema),
     })
 
-    const onSubmit = (data) => {
+    const onConnect = (data) => {
         console.log(data);
         localStorage.setItem('HomePageData', JSON.stringify(data));
         reset();
@@ -36,7 +36,7 @@ function Contact() {
                             <h3>Do you have a question<br />
                                 or want to become a seller?</h3>
                             <p>Fill this form and our manager will contact you next 48 hours.</p>
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onConnect)}>
                                 <div className={styles.nameEmail}>
                                     <div className={styles.inputError}>
                                         <Form.Control className={styles.focusColor} style={{ borderColor: errors.name?.message ? "red" : "#1AC073" }} type="text" placeholder="Your Name" {...register("name")} />
