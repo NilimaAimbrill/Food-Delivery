@@ -32,12 +32,22 @@ function SignUp(props) {
 
     })
 
+    // const [user, setUser] = useState()
+
+    // useEffect(() => {
+    //     const loggedInUser = localStorage.getItem("UserData");
+    //     if (loggedInUser) {
+    //         const foundUser = JSON.parse(loggedInUser);
+    //         setUser(foundUser);
+    //     }
+    // }, []);
+
     const onSubmit = (data) => {
         console.log(data);
-        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem("UserData", JSON.stringify(data));
         reset();
     }
-
+    
 
     return (
         <>
@@ -51,7 +61,7 @@ function SignUp(props) {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter" className={styles.signUpHeading}>
-                        {currentScreen === "SIGNUP" ? "Sign Up" : "Sign In" }
+                            {currentScreen === "SIGNUP" ? "Sign Up" : "Sign In"}
                         </Modal.Title>
 
                     </Modal.Header>
@@ -78,12 +88,12 @@ function SignUp(props) {
                             }
 
                             <div className={styles.signupButton}>
-                                <Button type="submit" >{currentScreen === "SIGNUP" ? "SignUp" : "SignIn" }</Button>
+                                <Button type="submit" >{currentScreen === "SIGNUP" ? "SignUp" : "SignIn"}</Button>
                             </div>
                         </form>
                     </Modal.Body>
                     <Modal.Footer className={styles.signUpModalFooter}>
-                        <p>Already have an account? <span onClick={() => currentScreen === "SIGNUP" ? setCurrentScreen("SIGNIN"):setCurrentScreen("SIGNUP")}>{currentScreen === "SIGNUP" ? "Sign In" : "Sign Up"}</span> here!</p>
+                        <p>Already have an account? <span onClick={() => currentScreen === "SIGNUP" ? setCurrentScreen("SIGNIN") : setCurrentScreen("SIGNUP")}>{currentScreen === "SIGNUP" ? "Sign In" : "Sign Up"}</span> here!</p>
                     </Modal.Footer>
                 </Modal>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import Container from 'react-bootstrap/Container';
@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Tooltip from "@material-ui/core/Tooltip";
 import LoginIcon from '@mui/icons-material/Login';
 import SignUp from './Sign Up modal/SignUp'
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 function Header() {
     const [modalShow, setModalShow] = React.useState(false);
@@ -37,9 +38,9 @@ function Header() {
                 </Container>
             </Navbar>
             <SignUp
-                        show={modalShow}
-                        onHide={() => setModalShow(false)}
-                    />
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
         </div>
     )
 }

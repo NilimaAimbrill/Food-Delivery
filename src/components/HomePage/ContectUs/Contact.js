@@ -17,12 +17,14 @@ function Contact() {
         message: yup.string().required("Your Message is required!"),
 
     })
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit,reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     })
 
     const onSubmit = (data) => {
         console.log(data);
+        localStorage.setItem('HomePageData', JSON.stringify(data));
+        reset();
 
     }
     return (
