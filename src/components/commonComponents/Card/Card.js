@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import styles from './Card.module.css'
 import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
@@ -6,9 +6,12 @@ import Card from 'react-bootstrap/Card';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { Link } from 'react-router-dom';
 import Counter from '../CounterButton/Counter';
+import { LoginContext } from '../../../App';
 
 function CommonCard(product) {
-    // const {img,pizzaName,pizzaPrice,time,stars}=props
+
+    const {addProduct} = useContext(LoginContext);
+
     return (
         <div>
             <Card className={styles.card}>
@@ -24,10 +27,9 @@ function CommonCard(product) {
                                 {product.ratings}
                             </Button>
                             <div className={styles.esimatedTime}>
-                                <Counter />
+                                <Button onClick={addProduct}>Add</Button>
                             </div>
                         </div>
-
                     </div>
                 </Card.Body>
             </Card>

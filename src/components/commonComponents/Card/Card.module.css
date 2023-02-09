@@ -40,7 +40,7 @@
   justify-content: space-between; */
   font-family: 'SF Pro Text';
 }
-.esimatedTime {
+.esimatedTime button {
   text-transform: capitalize;
 } 
 .buttonRate {

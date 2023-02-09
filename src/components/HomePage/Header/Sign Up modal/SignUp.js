@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -10,15 +10,18 @@ import useFormPersist from 'react-hook-form-persist'
 import SignIn from "../Sign In modal/SignIn";
 import { CleaningServices } from "@mui/icons-material";
 import { Alert } from "react-bootstrap";
-// import { LoginContext } from "../../../../Contex/LogIn/LoginContext";
+import LoginStateContext from "../../../../Contex/LoginStateContext";
+import { LoginContext } from "../../../../App";
 
 const allData = [];
 
 function SignUp(props) {
-    const [modalShow, setModalShow] = React.useState(false);
-    const [modalTwoShow, setModalTwoShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
     const [currentScreen, setCurrentScreen] = useState("SIGNUP");
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const contextData = useContext(LoginContext);
+
+
+
 
     // const [fullName, setFullName] = useState('');
     // const [email, setEmail] = useState('');
@@ -46,55 +49,34 @@ function SignUp(props) {
     //         setUser(foundUser);
     //     }
     // }, []);
-
+    console.log(contextData)
 
     const onSubmit = (data) => {
         // reset();
         if (currentScreen === "SIGNUP") {
             allData.push(data)
             localStorage.setItem("UserData", JSON.stringify(allData));
+            alert("signed up sucessfully")
             console.log("AllData", allData);
         } else {
             console.log("mydataa", data)
             const storedData = localStorage.getItem("UserData");
             console.log("Allmydata", storedData)
             const parsedData = JSON.parse(storedData);
+
             parsedData.find((object) => {
                 console.log(object.Email)
                 if (data.Email === object.Email && data.Password === object.Password) {
+                    { contextData.setIsLoggedIn(true) }
                     alert("Sign in successful!");
+                    modalShow(false)
                 } else {
+                    { contextData.setIsLoggedIn(false) }
                     alert("Wrong email or password");
                 }
-                // console.log("email id" , loginData)
             })
-            // if (!loginData) {
-            //     console.log(1)
-            //     alert("No user data found in local storage.");
-            //     return;
-            // }
-            // console.log("parsedData", loginData)
-
         }
     }
-    // const handleLogin = (data) => {
-    //     console.log("data",data)
-    //     const storedData = localStorage.getItem("UserData");
-    //     const parsedData = JSON.parse(storedData);
-    //     if (!storedData) {
-    //         console.log(1)
-    //         alert("No user data found in local storage.");
-    //         return;
-    //     }
-
-    //     console.log("storedData",parsedData)
-
-    //     if (data.email === parsedData.email && data.password === parsedData.password) {
-    //         console.log(2)
-
-    //         alert("Sign in successful!");
-    //     } else {
-    //         alert("Wrong email or password");
 
     return (
         <>
@@ -149,10 +131,6 @@ function SignUp(props) {
                     </Modal.Footer>
                 </Modal>
             </div>
-            <SignIn
-                show={modalTwoShow}
-                onHide={() => setModalTwoShow(false)}
-            />
         </>
     )
 }

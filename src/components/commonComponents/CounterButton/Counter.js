@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import styles from './Counter.module.css'
+import { LoginContext } from "../../../App";
 
 function Counter() {
     let [num, setNum] = useState(0);
+    const counterContext = useContext(LoginContext);
+
     let incNum = () => {
-        if (num < 10) {
-            setNum(Number(num) + 1);
+        if (counterContext.isLoggedIn === true) {
+            if (num < 10) {
+                setNum(Number(num) + 1);
+            }
+        }else {
+            alert("Please login")
         }
     };
     let decNum = () => {
-        if (num > 0) {
-            setNum(num - 1);
+        if (counterContext.isLoggedIn === true){
+            if (num > 0) {
+                setNum(num - 1);
+            }
+        }else {
+            alert("Please login")
         }
+        
     }
     let handleChange = (e) => {
         setNum(e.target.value);

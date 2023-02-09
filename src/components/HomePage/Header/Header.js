@@ -7,11 +7,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import Tooltip from "@material-ui/core/Tooltip";
 import LoginIcon from '@mui/icons-material/Login';
 import SignUp from './Sign Up modal/SignUp'
+import Badge from 'react-bootstrap/Badge';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { LoginContext } from '../../../App';
 // import { LoginContext } from '../../../Contex/LogIn/LoginContext';
 
 function Header() {
     const [modalShow, setModalShow] = React.useState(false);
+  const contextData = useContext(LoginContext);
+  const {productCount} = useContext(LoginContext);
 
     return (
         <div className={styles.headerMain}>
@@ -31,15 +35,15 @@ function Header() {
                     <div className={styles.searchShopIconMain}>
                         <ul className={styles.searchShopIcon}>
                             <li className={styles.searchShopIcon1}>
-                                {/* {isLoggedIn === true ? (
+                                {contextData.isLoggedIn === true ? (
                                     <Tooltip title='My cart'>
-                                        <ShoppingBagIcon className='searchIcon' />
+                                    <span><ShoppingBagIcon className='searchIcon' /><Badge bg="secondary">{productCount}</Badge></span>
                                     </Tooltip>
-                                ) : ( */}
+                                ) : (
                                     <Tooltip title='LogIn'>
                                         <LoginIcon className='searchIcon' onClick={() => setModalShow(true)} />
                                     </Tooltip>
-                                {/* )} */}
+                                )}
                             </li>
                         </ul>
                     </div>
