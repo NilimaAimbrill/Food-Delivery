@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import styles from './Card.module.css'
 import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/Star';
@@ -10,7 +10,9 @@ import { LoginContext } from '../../../App';
 
 function CommonCard(product) {
 
-    const {addProduct} = useContext(LoginContext);
+    const contextData = useContext(LoginContext);
+
+    const { addProduct } = useContext(LoginContext);
 
     return (
         <div>
@@ -27,7 +29,12 @@ function CommonCard(product) {
                                 {product.ratings}
                             </Button>
                             <div className={styles.esimatedTime}>
-                                <Button onClick={addProduct}>Add</Button>
+                                {contextData.isLoggedIn === true ? (
+                                    <Button onClick={addProduct}>Add</Button>
+                                ) : (
+                                    <Button onClick={() => alert("Please sign in")}>Add</Button>
+                                )
+                                }
                             </div>
                         </div>
                     </div>
