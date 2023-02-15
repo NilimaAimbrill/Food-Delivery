@@ -34,15 +34,15 @@ function ProductGallery(product) {
   }
   console.log("currentImage", currentImage)
   return (
-    <div>
-      <div className={styles.mainProductImage}>
-        <img className={styles.foodImage} src={currentImage} alt={noImageAvailable} />
-      </div>
+    <div className={styles.allPhotos}>
       <div className={styles.photoGalleryCollumns}>
         {products?.gallery?.map((gal) => (
           <img src={gal?.thumbnail} alt={noImageAvailable} onClick={() => handleImageClick(gal?.thumbnail)} />
         ))
         }
+      </div>
+      <div className={styles.mainProductImage}>
+        <img className={styles.foodImage} src={currentImage} alt={noImageAvailable} />
       </div>
     </div>
   )

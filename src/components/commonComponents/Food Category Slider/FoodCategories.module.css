@@ -11,6 +11,10 @@
 .mainCategoris ul {
     gap:10px;
 }
+.mainCategoris button {
+    z-index: 0 !important;
+}
+
 .card p {
     text-align:center;
     color: white;

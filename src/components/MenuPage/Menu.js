@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './Menu.module.css'
@@ -8,10 +8,32 @@ import banner1 from '../images/banner1.jpg'
 import banner2 from '../images/banner2.jpg'
 import banner3 from '../images/banner3.jpg'
 import Button from 'react-bootstrap/Button';
+import axios from 'axios'
+import AddIcon from '@mui/icons-material/Add';
 import cardDetail from '../HomePage/HomeKitchen/CardContent'
 
 function Menu() {
+  const [url, setUrl] = useState("https:/www.themealdb.com/api/json/v1/1/categories.php");
+  const [item, setItem] = useState();
+  const [show, setShow] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [limit, setLimit] = useState(10)
 
+  useEffect(() => {
+    fetch(url).then(res => res.json()).then(data => {
+      console.log(data.categories);
+      setItem(data.categories);
+      setShow(true)
+      axios
+        .get(`https://mock.redq.io/api/products?searchJoin=and&with=type%3Bauthor&language=en&search=type.slug:grocery%3Bstatus:publish&limit=${limit}`)
+        .then((response) => setProducts(response.data.data))
+        .then((error) => console.log(error));
+    })
+  }, [url, limit])
+  const loadMore = () => {
+    console.log("clicked")
+    setLimit(limit + 10)
+  }
   return (
     <>
       <div className={styles.menuMain}>
@@ -86,13 +108,17 @@ function Menu() {
               <div className={styles.dishesCard}>
                 <div className={styles.allCards}>
                   <Row>
-                    {cardDetail.map(details => (
-                      <Col lg={4} xl={3} xxl={4} md={4} className={styles.cardMarginBottom}>
-                        <CommonCard key={details.id} {...details} />
+                    {products.map(product => (
+                      <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                        <CommonCard {...product} />
                       </Col>
                     ))}
                   </Row>
-                  <LoadMore />
+                  <div className={styles.loadmorebtn}>
+                    <Button variant="outlined" startIcon={<AddIcon />} onClick={loadMore}>
+                      Load more...
+                    </Button>
+                  </div>
 
                 </div>
               </div>

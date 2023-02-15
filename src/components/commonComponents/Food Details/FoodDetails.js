@@ -45,12 +45,12 @@ function FoodDetails() {
                 <Container>
                     <div className={styles.allFoodDetails}>
                         <Row className={styles.allContentRow}>
-                            <Col md={12} lg={7} xl={6} className={styles.foodDetailsImage}>
+                            <Col md={12} lg={6} xl={6} className={styles.foodDetailsImage}>
                                 <div className={styles.productGalleryImages}>
                                     <ProductGallery />
                                 </div>
                             </Col>
-                            <Col md={12} lg={5} xl={6} className={styles.foodDetailsContent}>
+                            <Col md={12} lg={6} xl={6} className={styles.foodDetailsContent}>
                                 <div className={styles.detailPizzaNameStars}>
                                     <h1>{products?.name}</h1>
                                     <div className={styles.heartIcon}><FavoriteBorderIcon /></div>

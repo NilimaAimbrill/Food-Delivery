@@ -31,9 +31,9 @@ function Counter() {
     return (
 
         <div className={styles.inputGroup}>
-            <button className={styles.increDecreBtn} type="button" onClick={decNum}> - </button>
+            <button className={styles.increseBtn} type="button" onClick={decNum}> - </button>
             <input type="text" className={styles.quantityInput} value={num} onChange={handleChange} />
-            <button className={styles.increDecreBtn} type="button" onClick={incNum}> + </button>
+            <button className={styles.dicreseecreBtn} type="button" onClick={incNum}> + </button>
         </div>
 
     );

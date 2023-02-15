@@ -140,3 +140,13 @@ h6 {
 .cardMarginBottom {
   margin-bottom: 40px;
 }
+@media (max-width:995px){
+  .foodDetailsImage {
+    order: 2;
+  }
+}
+@media (max-width:426px) {
+  .detailPizzaNameStars h1 {
+    font-size: 50px;
+  }
+}

@@ -12,7 +12,7 @@ function CommonCard(product) {
 
     const contextData = useContext(LoginContext);
 
-    const { addProduct } = useContext(LoginContext);
+    const { addToCart } = useContext(LoginContext);
 
     return (
         <div>
@@ -30,7 +30,13 @@ function CommonCard(product) {
                             </Button>
                             <div className={styles.esimatedTime}>
                                 {contextData.isLoggedIn === true ? (
-                                    <Button onClick={addProduct}>Add</Button>
+                                    product.isInCart ? (<div>
+                                        <button onClick={() => contextData.decrementQuantity(product.id)}>-</button>
+                                        <span>{product.quantity}</span>
+                                        <button onClick={() => contextData.incrementQuantity(product.id)}>+</button>
+                                    </div>
+                                    ) : (<Button onClick={() => addToCart(product)}>Add</Button>)
+
                                 ) : (
                                     <Button onClick={() => alert("Please sign in")}>Add</Button>
                                 )
@@ -40,7 +46,7 @@ function CommonCard(product) {
                     </div>
                 </Card.Body>
             </Card>
-        </div>
+        </div >
     )
 }
 
