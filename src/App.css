@@ -9,3 +9,10 @@
   font-family: 'Gilroy-Medium';
   src: local('Gilroy-Medium'), url('./Fonts/Gilroy-Medium.ttf') format('truetype');
 }
+.blur {
+  filter: blur(2px);
+  overflow: hidden;
+}
+.blur div {
+  overflow: hidden;
+}

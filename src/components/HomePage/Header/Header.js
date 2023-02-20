@@ -11,6 +11,7 @@ import Badge from 'react-bootstrap/Badge';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { LoginContext } from '../../../App';
 import CartPage from '../../commonComponents/CartPage/CartPage';
+import zIndex from '@material-ui/core/styles/zIndex';
 // import { LoginContext } from '../../../Contex/LogIn/LoginContext';
 
 function Header() {

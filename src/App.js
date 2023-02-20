@@ -21,14 +21,16 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [productCount, setProductCount] = useState(0);
   const [cart, setCart] = useState([]);
+  const [isInCart, setIsInCart] = useState(false)
   const [products, setProducts] = useState([]);
   const [isOpen, setOpen] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
-  
+
   const addToCart = (product) => {
-    const updatedCart = [...cart,{ ...product, id: product.slug, quantity: 1  }];
+    const updatedCart = [...cart, { ...product, id: product.slug, quantity: 1 }];
     setCart(updatedCart);
     // console.log("cart", updatedCart)
     setTotalPrice(totalPrice + product.price);
@@ -38,7 +40,8 @@ function App() {
     setProductCount(productCount + 1);
     console.log(productCount);
   };
-  
+
+  console.log("cartProducts", products)
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((item) => item.id !== productId);
     const removedItem = cart.find((item) => item.id === productId);
@@ -49,11 +52,18 @@ function App() {
       products.map((p) => (p.id === productId ? { ...p, isInCart: false } : p))
     );
   };
-  
+
+  const checkCart = (productId) => {
+    cart.products.find((item) => item.id === productId);
+    setIsInCart(true);
+  }
 
   const toggleDrawer = () => {
     setOpen(!isOpen);
   };
+  const closeDrawer = () => {
+    setOpen(false);
+  }
 
   const incrementQuantity = (productId) => {
     const updatedCart = cart.map((item) => {
@@ -77,19 +87,23 @@ function App() {
 
   return (
     <div className='App'>
-      <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn,decrementQuantity, productCount,removeFromCart,incrementQuantity, setProductCount, isOpen, setOpen, toggleDrawer, addToCart,totalPrice,setTotalPrice, cart, setCart }}>
+      <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, decrementQuantity, setIsInCart, isInCart, productCount, checkCart, removeFromCart, incrementQuantity, setProductCount, isOpen, setOpen, toggleDrawer, addToCart, totalPrice, setTotalPrice, cart, setCart, searchQuery, setSearchQuery, searchResults, setSearchResults, products }}>
         <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/contact' element={<ContactUsPage />} />
-            <Route path='/menu' element={<Menu />} />
-            <Route path='/franchise_enquiry' element={<FranchiseEnquiry />} />
-            <Route path='/offer' element={<Offer />} />
-            <Route path='/food_details/:productId' element={<FoodDetails />} />
-          </Routes>
+          <div className={isOpen ? "temp blur" : "temp"}>
+            <Header />
+            <div className={isOpen ? "temp blur" : "temp"} onClick={() => { setOpen(false) }}>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/contact' element={<ContactUsPage />} />
+                <Route path='/menu' element={<Menu />} />
+                <Route path='/franchise_enquiry' element={<FranchiseEnquiry />} />
+                <Route path='/offer' element={<Offer />} />
+                <Route path='/food_details/:productId' element={<FoodDetails />} />
+              </Routes>
+              <Footer />
+            </div>
+          </div>
           {isOpen && (<CartPage />)}
-          <Footer />
         </BrowserRouter>
       </LoginContext.Provider>
     </div>

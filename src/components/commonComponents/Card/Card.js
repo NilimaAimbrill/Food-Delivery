@@ -12,6 +12,9 @@ function CommonCard(product) {
 
     const contextData = useContext(LoginContext);
 
+    const cartProducts = contextData.cart;
+    const isCart = cartProducts.find((_item) => _item.id === product.id)
+
     const { addToCart } = useContext(LoginContext);
 
     return (
@@ -25,17 +28,19 @@ function CommonCard(product) {
                     </Card.Text>
                     <div className={styles.rating}>
                         <div className={styles.buttonRate}>
-                            <Button startIcon={<StarIcon className={styles.starIcon} />}>
+                            {/* <Button startIcon={<StarIcon className={styles.starIcon} />}>
                                 {product.ratings}
-                            </Button>
+                            </Button> */}
                             <div className={styles.esimatedTime}>
                                 {contextData.isLoggedIn === true ? (
-                                    product.isInCart ? (<div>
-                                        <button onClick={() => contextData.decrementQuantity(product.id)}>-</button>
-                                        <span>{product.quantity}</span>
-                                        <button onClick={() => contextData.incrementQuantity(product.id)}>+</button>
-                                    </div>
-                                    ) : (<Button onClick={() => addToCart(product)}>Add</Button>)
+                                    !isCart ? (<Button onClick={() => addToCart(product)}>Add</Button>)
+                                        :
+                                        (<div>
+                                            <button onClick={() => contextData.decrementQuantity(product.id)}>-</button>
+                                            <span>{contextData.product.quantity}</span>
+                                            <button onClick={() => contextData.incrementQuantity(product.id)}>+</button>
+                                        </div>)
+
 
                                 ) : (
                                     <Button onClick={() => alert("Please sign in")}>Add</Button>

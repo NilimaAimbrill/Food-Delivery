@@ -13,17 +13,17 @@
   background-color: white;
   border-radius: 10px;
   position: fixed;
-  z-index: 1;
+  z-index: 1 !important;
   right: 0;
-  top: 73px;
-  width: 35%;
+  top: 0px;
+  width: 31%;
   height: 100%;
   overflow: auto;
 }
 .checkOutBtn {
   position: fixed;
   bottom: 0;
-  width: 35%;
+  width: 31%;
   display: flex;
   margin: auto;
   justify-content: space-between;
@@ -58,10 +58,38 @@
   color: white;
   margin: auto 0;
 }
+.cartPageHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
 .inputGroup {
   display: grid;
   padding: 5px;
   margin: 0px;
+}
+.namePriceUnit p{
+  font-size: 13px;
+}
+.myAsideMenuRight p {
+  font-size: 13px;
+}
+.bagIconQuantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.bagIconQuantity path {
+  color: var(--yellowish-color);
+}
+.closeIconOfDrawer {
+  cursor: pointer;
+}
+.bagIconQuantity p{
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: var(--yellowish-color);
+
 }
 .inputGroup button {
   width: 30px;

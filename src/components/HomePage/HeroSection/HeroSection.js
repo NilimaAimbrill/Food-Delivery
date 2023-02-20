@@ -10,7 +10,7 @@ import { LoginContext } from '../../../App';
 
 
 function HeroSection() {
-    // const { isOpen } = useContext(LoginContext);
+    const contextData = useContext(LoginContext);
     return (
         <div className={styles.heroMain}>
             <Container>

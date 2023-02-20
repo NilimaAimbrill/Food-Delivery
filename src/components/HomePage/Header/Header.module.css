@@ -2,7 +2,7 @@
   background-color: var(--greenish-color);
   position: sticky;
   top: 0;
-  z-index: 1001;
+  z-index: 1;
 }
 
 .navBrand {
