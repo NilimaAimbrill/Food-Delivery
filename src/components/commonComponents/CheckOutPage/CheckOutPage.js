@@ -72,29 +72,29 @@ function CheckOutPage() {
                         <h4>Your Order</h4>
                         {cartData.cart.map(product => (
                             <div className={styles.productsOfCart}>
-                                <span>{product.quantity} x {product?.name} | {product?.unit}(s)</span>
-                                <span>${(product.quantity) * (product?.price)}</span>
+                                <span>{product.quantity} x {product?.name}</span>
+                                <span>${((product.quantity) * (product?.price)).toFixed(2)}</span>
                             </div>
                         ))}
                         <hr />
                         <div className={styles.payableAmountAll}>
                             <div className={styles.subTotal}>
                                 <span>Sub Total</span>
-                                <span>${cartData.totalPrice}</span>
+                                <span>${cartData.totalPrice.toFixed(2)}</span>
                             </div>
                             <div className={styles.tax}>
                                 <span>Tax</span>
-                                <span>$5</span>
+                                <span>$5.00</span>
                             </div>
                             <div className={styles.shipping}>
                                 <span>Estimated Shipping</span>
-                                <span>$2</span>
+                                <span>$2.00</span>
                             </div>
                             <hr />
                             <hr />
                             <div className={styles.grandTotal}>
                                 <span><b>Total</b></span>
-                                <span><b>${cartData.totalPrice + 7}</b></span>
+                                <span><b>${(cartData.totalPrice + 7).toFixed(2)}</b></span>
                             </div>
                         </div>
                         <hr />

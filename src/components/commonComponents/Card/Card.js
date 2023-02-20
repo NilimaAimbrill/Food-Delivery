@@ -5,7 +5,6 @@ import StarIcon from '@mui/icons-material/Star';
 import Card from 'react-bootstrap/Card';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { Link } from 'react-router-dom';
-import Counter from '../CounterButton/Counter';
 import { LoginContext } from '../../../App';
 
 function CommonCard(product) {

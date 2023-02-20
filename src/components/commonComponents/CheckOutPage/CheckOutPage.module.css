@@ -55,6 +55,17 @@
   width: 100%;
 }
 .contactSubmitBtn:hover {
-    background-color: var(--yellowish-color) !important;
-    border-color: var(--yellowish-color) !important;
+  background-color: var(--yellowish-color) !important;
+  border-color: var(--yellowish-color) !important;
+}
+.paymentMethod .form-select:focus {
+  box-shadow: none !important;
+}
+@media (max-width:991px) {
+  .cartPageLeft {
+    order: 2;
+  }
+  .cartPageLeft {
+    margin-top: 40px;
+  }
 }
