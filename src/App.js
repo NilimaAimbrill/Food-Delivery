@@ -1,5 +1,5 @@
 import './App.css';
-import { createContext, useState } from "react";
+import { createContext, useState,useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home'
@@ -28,6 +28,15 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
+  // const [user, setUser] = useState()
+
+  //   useEffect(() => {
+  //       const loggedInUser = localStorage.getItem("UserData");
+  //       if (loggedInUser) {
+  //           const foundUser = JSON.parse(loggedInUser);
+  //           setUser(foundUser);
+  //       }
+  //   }, []);
 
   const addToCart = (product) => {
     const updatedCart = [...cart, { ...product, id: product.slug, quantity: 1 }];
@@ -35,7 +44,7 @@ function App() {
     // console.log("cart", updatedCart)
     setTotalPrice(totalPrice + product.price);
     setProducts(
-      products.map((p) => (p.id === product.id ? { ...p, isInCart: true } : p))
+      products.map((p) => (p.id === product.id ? { ...p, isInCart: true,prodQuantity: 1 } : p))
     );
     setProductCount(productCount + 1);
     console.log(productCount);
@@ -53,13 +62,9 @@ function App() {
     );
   };
 
-
   const toggleDrawer = () => {
     setOpen(!isOpen);
   };
-  const closeDrawer = () => {
-    setOpen(false);
-  }
 
   const incrementQuantity = (productId) => {
     const updatedCart = cart.map((item) => {

@@ -35,6 +35,10 @@
   font-size: 20px;
   text-decoration: none;
 }
+.checkOutBtn:hover{
+  text-decoration: none;
+
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

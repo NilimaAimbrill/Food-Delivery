@@ -34,15 +34,13 @@ function CommonCard(product) {
                             </Button> */}
                             <div className={styles.esimatedTime}>
                                 {contextData.isLoggedIn === true ? (
-                                    !isCart ? (<Button onClick={() => addToCart(product)}>Add</Button>)
+                                    isCart && isCart.quantity >= 1 ? (<div className={styles.inputGroup}>
+                                        <button type="button" onClick={() => contextData.decrementQuantity(product.slug)}> - </button>
+                                        <span>{isCart?.quantity}</span>
+                                        <button type="button" onClick={() => contextData.incrementQuantity(product.slug)}> + </button>
+                                    </div>)
                                         :
-                                        (<div className={styles.inputGroup}>
-                                            <button type="button"  onClick={() => contextData.decrementQuantity(product.slug)}> - </button>
-                                            <span> 0 </span>
-                                            <button type="button" onClick={() => contextData.incrementQuantity(product.slug)}> + </button>
-                                        </div>)
-
-
+                                        (<Button onClick={() => addToCart(product)}>Add</Button>)
                                 ) : (
                                     <Button onClick={() => alert("Please sign in")}>Add</Button>
                                 )

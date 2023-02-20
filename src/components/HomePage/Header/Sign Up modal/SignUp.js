@@ -20,14 +20,6 @@ function SignUp(props) {
     const [currentScreen, setCurrentScreen] = useState("SIGNUP");
     const contextData = useContext(LoginContext);
 
-
-
-
-    // const [fullName, setFullName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const [confirmPassword, setConfirmPassword] = useState('');
-
     const schema = yup.object().shape({
         FullName: yup.string().required("Your Full name is required!"),
         Email: yup.string().email("Email contains @ and . signs!").required("Your Email is required!"),
@@ -40,16 +32,7 @@ function SignUp(props) {
 
     })
 
-    // const [user, setUser] = useState()
-
-    // useEffect(() => {
-    //     const loggedInUser = localStorage.getItem("UserData");
-    //     if (loggedInUser) {
-    //         const foundUser = JSON.parse(loggedInUser);
-    //         setUser(foundUser);
-    //     }
-    // }, []);
-    console.log(contextData)
+    
 
     const onSubmit = (data) => {
         // reset();
