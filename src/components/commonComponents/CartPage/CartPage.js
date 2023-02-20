@@ -1,4 +1,5 @@
 import { style } from '@mui/system'
+import { Link } from 'react-router-dom';
 import React, { useContext } from 'react'
 import styles from './CartPage.module.css'
 import Counter from '../CounterButton/Counter'
@@ -45,10 +46,10 @@ function CartPage() {
                     </div>
                 </aside>
             ))}
-            <button className={styles.checkOutBtn}>
+            <Link className={styles.checkOutBtn} onClick={toggleDrawer}  to="/checkoutpage">
                 <span>Check Out</span>
                 <span>{cartData.totalPrice}</span>
-            </button>
+            </Link>
         </div>
     )
 }

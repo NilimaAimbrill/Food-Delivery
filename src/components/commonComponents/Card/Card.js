@@ -13,8 +13,9 @@ function CommonCard(product) {
     const contextData = useContext(LoginContext);
 
     const cartProducts = contextData.cart;
-    const isCart = cartProducts.find((_item) => _item.id === product.id)
-
+    console.log("sdjhsdsjd", contextData.cart)
+    const isCart = cartProducts.find((item) => item.id === product.slug)
+    console.log("productId", product.slug)
     const { addToCart } = useContext(LoginContext);
 
     return (
@@ -35,10 +36,10 @@ function CommonCard(product) {
                                 {contextData.isLoggedIn === true ? (
                                     !isCart ? (<Button onClick={() => addToCart(product)}>Add</Button>)
                                         :
-                                        (<div>
-                                            <button onClick={() => contextData.decrementQuantity(product.id)}>-</button>
-                                            <span>{contextData.product.quantity}</span>
-                                            <button onClick={() => contextData.incrementQuantity(product.id)}>+</button>
+                                        (<div className={styles.inputGroup}>
+                                            <button type="button"  onClick={() => contextData.decrementQuantity(product.slug)}> - </button>
+                                            <span> 0 </span>
+                                            <button type="button" onClick={() => contextData.incrementQuantity(product.slug)}> + </button>
                                         </div>)
 
 

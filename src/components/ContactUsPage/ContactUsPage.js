@@ -29,15 +29,7 @@ export const ContactUsPage = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     })
-    // const [formData, setFormData] = useState({});
-
-    // useEffect(() => {
-    //     console.log("FORMDATA", formData)
-    //     localStorage.setItem('formData', JSON.stringify(formData));
-    //   }, [formData]);
-
-
-    const onContactUs = (data) => {
+       const onContactUs = (data) => {
         console.log(data);
         // setFormData(data);
         localStorage.setItem('ContactData', JSON.stringify(data));
