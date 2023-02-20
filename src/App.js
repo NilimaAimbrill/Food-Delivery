@@ -13,7 +13,6 @@ import './variable.css';
 import FoodDetails from './components/commonComponents/Food Details/FoodDetails';
 import CartPage from './components/commonComponents/CartPage/CartPage';
 
-// import {QueryClient,QueryClientProvider} from "@tanstack/react-query"
 
 export const LoginContext = createContext();
 

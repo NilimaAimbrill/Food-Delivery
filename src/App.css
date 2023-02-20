@@ -11,8 +11,6 @@
 }
 .blur {
   filter: blur(2px);
-  overflow: hidden;
-}
-.blur div {
-  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
