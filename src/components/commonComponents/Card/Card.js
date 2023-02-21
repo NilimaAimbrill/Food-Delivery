@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import styles from './Card.module.css'
 import Button from '@mui/material/Button';
-import StarIcon from '@mui/icons-material/Star';
 import Card from 'react-bootstrap/Card';
-import AddBoxIcon from '@mui/icons-material/AddBox';
 import { Link } from 'react-router-dom';
 import { LoginContext } from '../../../App';
 
@@ -12,9 +10,7 @@ function CommonCard(product) {
     const contextData = useContext(LoginContext);
 
     const cartProducts = contextData.cart;
-    console.log("sdjhsdsjd", contextData.cart)
     const isCart = cartProducts.find((item) => item.id === product.slug)
-    console.log("productId", product.slug)
     const { addToCart } = useContext(LoginContext);
 
     return (

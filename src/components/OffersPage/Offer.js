@@ -5,8 +5,6 @@ import buyOneGetOne from '../images/image-586394-1671524332.gif'
 import OfferCard from '../commonComponents/OfferCard/OfferCard'
 import offerDetail from './OfferCardDeatails'
 
-
-
 function Offer() {
   return (
     <div className={styles.offerMain}>

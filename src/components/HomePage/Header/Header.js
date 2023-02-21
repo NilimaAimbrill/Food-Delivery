@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import Container from 'react-bootstrap/Container';
@@ -10,9 +10,7 @@ import SignUp from './Sign Up modal/SignUp'
 import Badge from 'react-bootstrap/Badge';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { LoginContext } from '../../../App';
-import CartPage from '../../commonComponents/CartPage/CartPage';
-import zIndex from '@material-ui/core/styles/zIndex';
-// import { LoginContext } from '../../../Contex/LogIn/LoginContext';
+
 
 function Header() {
     const [modalShow, setModalShow] = React.useState(false);
@@ -59,7 +57,7 @@ function Header() {
                     onHide={() => setModalShow(false)}
                 />
             </div>
-            
+
 
         </>
     )

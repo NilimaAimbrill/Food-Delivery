@@ -1,14 +1,14 @@
 .margins {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.borderStyle *{
-    border-radius: 10px;
+.borderStyle * {
+  border-radius: 10px;
 }
 .borderStyle .styled__control-is-focused:focus {
-    border: 3px solid var(--yellowish-color) !important;
+  border: 3px solid var(--yellowish-color) !important;
   box-shadow: none !important;
 }
-#react-select-3-listbox:focus{
-    background-color: var(--yellowish-color) !important;
+#react-select-3-listbox:focus {
+  background-color: var(--yellowish-color) !important;
 }

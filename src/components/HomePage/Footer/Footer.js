@@ -11,17 +11,17 @@ function Footer() {
     return (
         <div className={styles.footerMain}>
             <Container>
-                <Navbar collapseOnSelect expand="lg"  variant="dark">
+                <Navbar collapseOnSelect expand="lg" variant="dark">
                     <Container className={styles.navContainer}>
                         <Navbar.Brand href="#home" className={styles.navBrand}>WHAT2EAT</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav"  className={styles.toggleButton}  />
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" className={styles.toggleButton} />
                         <Navbar.Collapse id="responsive-navbar-nav" className={styles.navlinks}>
                             <Nav className={styles.gapBetween}>
-                            <Nav.Link  as={Link} to="/" className={styles.active}>Home</Nav.Link>
-                            <Nav.Link as={Link} to="/offer">Offers</Nav.Link>
-                            <Nav.Link as={Link} to="/franchiseEnquiry">Franchise Enquiry</Nav.Link>
-                            <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
-                            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+                                <Nav.Link as={Link} to="/" className={styles.active}>Home</Nav.Link>
+                                <Nav.Link as={Link} to="/offer">Offers</Nav.Link>
+                                <Nav.Link as={Link} to="/franchiseEnquiry">Franchise Enquiry</Nav.Link>
+                                <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
+                                <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                         <div className={styles.searchShopIconMain}>
@@ -32,7 +32,7 @@ function Footer() {
                         </div>
                     </Container>
                 </Navbar>
-                <hr className={styles.horizontalLine}/>
+                <hr className={styles.horizontalLine} />
                 <div className={styles.copyright}>
                     <p>Copyright @2021 What2Eat</p>
                 </div>

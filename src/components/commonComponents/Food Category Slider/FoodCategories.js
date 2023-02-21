@@ -1,23 +1,13 @@
-import React from 'react'
-import styles from './FoodCategories.module.css'
-// import Carousel from 'react-bootstrap/Carousel';
-import img1 from '../../images/1.png'
-import img2 from '../../images/2.png'
-import img3 from '../../images/3.png'
+import React from 'react';
+import styles from './FoodCategories.module.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import img4 from '../../images/4.png'
-import img5 from '../../images/5.png'
-import img6 from '../../images/6.png'
-import img7 from '../../images/7.png'
-import img8 from '../../images/8.png'
+
 
 
 function FoodCategories({ data }) {
-    // console.log(data)
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
         },

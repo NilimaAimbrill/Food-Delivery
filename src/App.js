@@ -1,5 +1,5 @@
 import './App.css';
-import { createContext, useState,useEffect } from "react";
+import { createContext, useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home'
@@ -21,34 +21,21 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [productCount, setProductCount] = useState(0);
   const [cart, setCart] = useState([]);
-  // const [isInCart, setIsInCart] = useState(false)
   const [products, setProducts] = useState([]);
   const [isOpen, setOpen] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  // const [user, setUser] = useState()
-
-  //   useEffect(() => {
-  //       const loggedInUser = localStorage.getItem("UserData");
-  //       if (loggedInUser) {
-  //           const foundUser = JSON.parse(loggedInUser);
-  //           setUser(foundUser);
-  //       }
-  //   }, []);
 
   const addToCart = (product) => {
     const updatedCart = [...cart, { ...product, id: product.slug, quantity: 1 }];
     setCart(updatedCart);
-    // console.log("cart", updatedCart)
     setTotalPrice(totalPrice + product.price);
     setProducts(
       products.map((p) => (p.id === product.id ? { ...p, isInCart: true,prodQuantity: 1 } : p))
     );
     setProductCount(productCount + 1);
-    console.log(productCount);
-    console.log("cartProducts", updatedCart)
   };
 
   const removeFromCart = (productId) => {

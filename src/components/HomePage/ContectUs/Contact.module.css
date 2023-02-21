@@ -57,7 +57,7 @@
   padding: 10px 35px;
   border-color: var(--greenish-color);
 }
-.submitBtn button:hover{
+.submitBtn button:hover {
   background-color: var(--yellowish-color);
   border-color: var(--yellowish-color);
 }
@@ -79,10 +79,10 @@
     height: 276px;
   }
 }
-@media (max-width:350px) {
-    .deliveryBoyimg {
-        width: 270px;
-        height: 206px;
-        margin-top: 30px;
-      }
+@media (max-width: 350px) {
+  .deliveryBoyimg {
+    width: 270px;
+    height: 206px;
+    margin-top: 30px;
+  }
 }

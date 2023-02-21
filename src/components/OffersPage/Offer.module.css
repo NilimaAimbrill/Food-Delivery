@@ -1,15 +1,14 @@
 .allOfferHead {
-    text-align: left;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    display: flex;
-    gap: 20px;
-    
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
 }
 .allOfferHead img {
-    width: 60px;
-    height: 50px;
+  width: 60px;
+  height: 50px;
 }
 .offerMain {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }

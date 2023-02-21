@@ -3,42 +3,29 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import StarIcon from '@mui/icons-material/Star';
 import Col from 'react-bootstrap/Col';
-import styles from './FoodDetails.module.css'
+import styles from './FoodDetails.module.css';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useParams } from "react-router-dom"
-import axios from 'axios'
-import { CleaningServices } from '@mui/icons-material';
-import notAvailable from '../../images/no-image-icon-15.png'
+import { useParams } from "react-router-dom";
+import axios from 'axios';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ReadMoreToggle from '../ReadMoreButton/ReadMoreToggle';
 import ProductGallery from '../ProductGallery/ProductGallery';
 import CommonCard from '../Card/Card';
 
 
-
-// import image1 from '../../images/1.png'
-
 function FoodDetails() {
 
-    // const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState();
     let { productId } = useParams();
-    console.log("productId", productId)
     useEffect(() => {
-        // setLoading(true);
         axios
             .get(`https://mock.redq.io/api/products/${productId}`)
             .then((response) => {
                 setProducts(response.data)
-                console.log("response", response)
-                // setLoading(false);
             })
             .catch((error) => console.log(error));
     }, [productId]);
-    // const products = products.find(prod => prod.slug === productId)
-    // const {img,pizzaName,pizzaPrice,time,stars}=props
-    console.log("products",)
-
+   
     return (
         <div>
             <div className={styles.foodDetailsmain}>

@@ -1,9 +1,7 @@
-import { style } from '@mui/system'
-import { Link } from 'react-router-dom';
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import styles from './CartPage.module.css'
 import CloseIcon from '@mui/icons-material/Close';
-import img1 from '../../images/1.png'
 import { LoginContext } from '../../../App';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 

@@ -17,12 +17,11 @@ function FranchiseEnquiry() {
         number: yup.number().positive().integer().required("Your Phone number is required!"),
 
     })
-    const { register, handleSubmit,reset, formState: { errors } } = useForm({
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     })
 
     const onEnquiry = (data) => {
-        console.log(data);
         localStorage.setItem("FranchiseEnquiryData", JSON.stringify(data));
         reset();
     }

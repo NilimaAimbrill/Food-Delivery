@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styles from './CheckOutPage.module.css'
 import StorefrontIcon from '@mui/icons-material/Storefront';
-import { useController, useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 import * as yup from "yup"
@@ -24,16 +24,11 @@ function CheckOutPage() {
         resolver: yupResolver(schema),
     })
     const onContactUs = (data) => {
-        console.log(data);
-        // setFormData(data);
         localStorage.setItem('ContactData', JSON.stringify(data));
         reset();
 
     }
-
     const cartData = useContext(LoginContext);
-
-
     return (
         <Container>
             <div className={styles.mainCheckOut}>

@@ -1,56 +1,55 @@
-
 .carouselFlex {
-    display: flex;
+  display: flex;
 }
 .carouselItems {
-    padding: 50px 30px;
+  padding: 50px 30px;
 }
 .menuCarousel {
-    color: white;
-    background-color: var(--greenish-color) ;
+  color: white;
+  background-color: var(--greenish-color);
 }
 .carouselItems img {
-    border-bottom-left-radius: 60px;
-    border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-top-right-radius: 60px;
 }
 .carouselFlex h5 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-.orderNowBtn{
-    background-color: var(--yellowish-color) !important;
-    color: white;
-    padding: 7px 40px;
-    border-color: var(--yellowish-color);
-    border-radius: 20px;
-    margin-bottom: 30px;
-    transition: transform 1s;
+.orderNowBtn {
+  background-color: var(--yellowish-color) !important;
+  color: white;
+  padding: 7px 40px;
+  border-color: var(--yellowish-color);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  transition: transform 1s;
 }
 .orderNowBtn:hover {
-    transform: scale(1.5);
-    border-color: var(--greenish-color);
+  transform: scale(1.5);
+  border-color: var(--greenish-color);
 }
 .popularDishesHeading {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .cardMarginBottom {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .loadmorebtn {
-    margin-top: 60px;
-    margin-bottom: 30px;
-  }
-  .loadmorebtn button {
-    border: 1px solid var(--yellowish-color);
-    padding: 13px 40px;
-    color: #929292;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    font-family: 'SF Pro Text';
-    text-transform:none;
-  }
-  .loadmorebtn button:hover {
-    border: 1px solid var(--greenish-color) !important;
-  }
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.loadmorebtn button {
+  border: 1px solid var(--yellowish-color);
+  padding: 13px 40px;
+  color: #929292;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: 'SF Pro Text';
+  text-transform: none;
+}
+.loadmorebtn button:hover {
+  border: 1px solid var(--greenish-color) !important;
+}

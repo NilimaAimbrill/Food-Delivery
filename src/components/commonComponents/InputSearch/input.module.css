@@ -12,7 +12,7 @@
 .searchInput input {
   padding-left: 10px;
 }
-.searchInput input:focus{
+.searchInput input:focus {
   box-shadow: none;
   border: 2px solid var(--yellowish-color);
 }
@@ -32,7 +32,7 @@
 .searchButton:hover {
   background: var(--greenish-color) !important;
   color: white !important;
-  border-color:var(--yellowish-color) !important;
+  border-color: var(--yellowish-color) !important;
 }
 .input-group {
   width: 398px;

@@ -1,16 +1,14 @@
-import React, { useState,useEffect } from 'react'
+import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import ContactCard from '../commonComponents/ContactCard/ContactCard'
 import styles from './ContactUsPage.module.css'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import Header from '../HomePage/Header/Header'
 import Button from '@mui/material/Button';
 import Form from 'react-bootstrap/Form';
-import Footer from '../HomePage/Footer/Footer';
 import SendIcon from '@mui/icons-material/Send';
-import { useController, useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 
@@ -29,9 +27,7 @@ export const ContactUsPage = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     })
-       const onContactUs = (data) => {
-        console.log(data);
-        // setFormData(data);
+    const onContactUs = (data) => {
         localStorage.setItem('ContactData', JSON.stringify(data));
         reset();
 
@@ -66,26 +62,26 @@ export const ContactUsPage = () => {
                             <form onSubmit={handleSubmit(onContactUs)}>
                                 <Form.Group className={styles.inputFlex} controlId="exampleForm.ControlInput1">
                                     <div className={styles.allErrorInput}>
-                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.name?.message ? "red" : "#1AC073" }} type="text" placeholder="Name" {...register("name")}/>
+                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.name?.message ? "red" : "#1AC073" }} type="text" placeholder="Name" {...register("name")} />
                                         <p>{errors.name?.message}</p>
                                     </div>
                                     <div className={styles.allErrorInput}>
-                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.lastname?.message ? "red" : "#1AC073" }} type="text" placeholder="Last Name" {...register("lastname")}/>
+                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.lastname?.message ? "red" : "#1AC073" }} type="text" placeholder="Last Name" {...register("lastname")} />
                                         <p>{errors.lastname?.message}</p>
                                     </div>
                                 </Form.Group>
                                 <Form.Group className={styles.inputFlex} controlId="exampleForm.ControlInput1">
                                     <div className={styles.allErrorInput}>
-                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.number?.message ? "red" : "#1AC073" }} type="tel" placeholder="Contact Number" {...register("number")}/>
+                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.number?.message ? "red" : "#1AC073" }} type="tel" placeholder="Contact Number" {...register("number")} />
                                         <p>{errors.number?.message}</p>
                                     </div>
                                     <div className={styles.allErrorInput}>
-                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.email?.message ? "red" : "#1AC073" }} type="email" placeholder="Email id" {...register("email")}/>
+                                        <Form.Control className={styles.formInput} style={{ borderColor: errors.email?.message ? "red" : "#1AC073" }} type="email" placeholder="Email id" {...register("email")} />
                                         <p>{errors.email?.message}</p>
                                     </div>
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                    <Form.Control className={styles.focusTextArea} style={{ borderColor: errors.message?.message ? "red" : "#1AC073" }} as="textarea" rows={7} placeholder="Write your messages" {...register("message")}/>
+                                    <Form.Control className={styles.focusTextArea} style={{ borderColor: errors.message?.message ? "red" : "#1AC073" }} as="textarea" rows={7} placeholder="Write your messages" {...register("message")} />
                                     <p>{errors.message?.message}</p>
                                 </Form.Group>
                                 <Button className={styles.contactSubmitBtn} type='submit' endIcon={<SendIcon />}>Submit</Button>

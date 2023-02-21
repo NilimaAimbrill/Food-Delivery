@@ -1,16 +1,12 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import heroImage from '../../images/cuate.png'
 import styles from './HeroSection.module.css'
 import Input from '../../commonComponents/InputSearch/Input'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CartPage from '../../commonComponents/CartPage/CartPage';
-import { LoginContext } from '../../../App';
-
 
 function HeroSection() {
-    const contextData = useContext(LoginContext);
     return (
         <div className={styles.heroMain}>
             <Container>
@@ -26,7 +22,7 @@ function HeroSection() {
                         </Col>
                     </Row>
                 </div>
-                
+
             </Container>
         </div>
     )

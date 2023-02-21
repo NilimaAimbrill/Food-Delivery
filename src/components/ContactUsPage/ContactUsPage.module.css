@@ -1,67 +1,67 @@
-.contactInfoCard svg{
-    margin-top: 20px;
-    font-size: 60px;
-    color: var(--greenish-color);
-    transition: transform 1s;
+.contactInfoCard svg {
+  margin-top: 20px;
+  font-size: 60px;
+  color: var(--greenish-color);
+  transition: transform 1s;
 }
 .contactInfoCard svg:hover {
-    transform: scale(0.9)
+  transform: scale(0.9);
 }
 .headParaContact {
-    padding-top: 40px;
-    text-align: center;
+  padding-top: 40px;
+  text-align: center;
 }
 .contactInfoCard {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .formHeading {
-    margin-bottom: 30px;
-    margin-top: 50px;
-    font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: 30px;
 }
 .contactSubmitBtn {
-    background-color: var(--greenish-color) !important;
-    margin-bottom: 50px !important;
-    border-color: var(--greenish-color) !important;
-    margin-top: 20px !important;
-    color: white !important;
-    padding: 10px 20px !important;
-    border-radius: 30px !important;
+  background-color: var(--greenish-color) !important;
+  margin-bottom: 50px !important;
+  border-color: var(--greenish-color) !important;
+  margin-top: 20px !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
 }
 .contactSubmitBtn:hover {
-    background-color: var(--yellowish-color) !important;
-    border-color: var(--yellowish-color) !important;
+  background-color: var(--yellowish-color) !important;
+  border-color: var(--yellowish-color) !important;
 }
 .inputFlex {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 .formInput {
-    padding: 25px 15px;
+  padding: 25px 15px;
 }
 .formInput:focus {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 .allErrorInput {
-    width: 50%;
+  width: 50%;
 }
-form p{
-    color: red;
-    font-size: 12px;
-    text-align: left;
-    text-transform: lowercase;
+form p {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  text-transform: lowercase;
 }
 .focusTextArea:focus {
-    border: 2px solid var(--greenish-color) !important;
-    box-shadow: none !important;
+  border: 2px solid var(--greenish-color) !important;
+  box-shadow: none !important;
 }
-@media (max-width:427px){
-    .inputFlex {
-        display: block;
-    }
-    .formInput {
-        margin-bottom: 30px;
-    }
+@media (max-width: 427px) {
+  .inputFlex {
+    display: block;
+  }
+  .formInput {
+    margin-bottom: 30px;
+  }
 }

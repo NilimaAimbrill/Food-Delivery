@@ -17,7 +17,7 @@
 
 .card p {
     text-align:center;
-    color: white;
+    /* color: white; */
     font-size: 20px;
     margin-bottom: 0px;
 }
@@ -36,7 +36,7 @@
     width: 180px !important;
     height: 220px !important;
     justify-content: space-evenly;
-    background-color: var(--greenish-color);
+    /* background-color: var(--greenish-color); */
 
 }
 .sliderImage {

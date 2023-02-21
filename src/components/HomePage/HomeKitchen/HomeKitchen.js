@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import ButtonGrp from '../../commonComponents/ButtonGroup/ButtonGroup';
+// import ButtonGrp from '../../commonComponents/ButtonGroup/ButtonGroup';
 import styles from './HomeKitchen.module.css'
 // import LoadMore from '../../commonComponents/LoadMore/LoadMore'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
 import CommonCard from '../../commonComponents/Card/Card';
-import cardDetail from './CardContent'
-import SelectDropDown from '../../commonComponents/SelectDropDown/SelectDropDown'
+// import SelectDropDown from '../../commonComponents/SelectDropDown/SelectDropDown'
 import FoodCategories from '../../commonComponents/Food Category Slider/FoodCategories';
 import axios from 'axios'
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
-
 
 
 function HomeKitchen(props) {
@@ -25,7 +22,6 @@ function HomeKitchen(props) {
 
     useEffect(() => {
         fetch(url).then(res => res.json()).then(data => {
-            console.log(data.categories);
             setItem(data.categories);
             setShow(true)
             axios
@@ -35,7 +31,6 @@ function HomeKitchen(props) {
         })
     }, [url, limit])
     const loadMore = () => {
-        console.log("clicked")
         setLimit(limit + 10)
     }
     return (

@@ -1,71 +1,69 @@
 .halfFields {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    margin-bottom: 25px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 .focusColor {
-    padding: 20px 10px;
+  padding: 20px 10px;
 }
 /* .focusColor:focus {
     border: 3px solid var(--greenish-color) !important;
     box-shadow: none !important;
 } */
 .allFrachiseHeadColor {
-    color: var(--greenish-color);
-    font-family: 'Squada One', cursive !important;
+  color: var(--greenish-color);
+  font-family: 'Squada One', cursive !important;
 }
 .allFrachiseHeadColor:hover {
-    color: var(--yellowish-color);
+  color: var(--yellowish-color);
 }
 .allFrachiseLeft {
-    text-align: left;
+  text-align: left;
 }
 .allFrachiseRightHead {
-    text-align: left;
-    margin-bottom: 25px;
+  text-align: left;
+  margin-bottom: 25px;
 }
 .allFrachiseBoth {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-family: 'SF Pro Text' !important;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'SF Pro Text' !important;
 }
 .franchiseEnquirySubmit {
-    margin-top: 25px  !important;
-    background-color: var(--greenish-color) !important;
-    color: white !important;
-    padding: 10px 20px !important;
-    border-radius: 30px !important;
-    border-color: var(--greenish-color) !important;
+  margin-top: 25px !important;
+  background-color: var(--greenish-color) !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
+  border-color: var(--greenish-color) !important;
 }
 .franchiseEnquirySubmit:hover {
-    background-color: var(--yellowish-color) !important;
-    border-color:var(--yellowish-color) !important;
-    color: white;
+  background-color: var(--yellowish-color) !important;
+  border-color: var(--yellowish-color) !important;
+  color: white;
 }
 .textArea {
-    border-color: var(--greenish-color) !important;
-
+  border-color: var(--greenish-color) !important;
 }
 .inputError {
+  display: block;
+  width: 50%;
+}
+@media (max-width: 992px) {
+  .allFrachiseRightHead {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .halfFields {
     display: block;
-    width: 50%;
-}
-@media (max-width:992px) {
-    .allFrachiseRightHead {
-        margin-top: 30px;
-    }
-}
-@media (max-width:426px) {
-    .halfFields {
-        display: block;
-        margin-bottom: 0px;
-    }
-    .focusColor {
-        margin-bottom: 25px;
-    }
-    .inputError {
-        width: 100%;
-    }
-
+    margin-bottom: 0px;
+  }
+  .focusColor {
+    margin-bottom: 25px;
+  }
+  .inputError {
+    width: 100%;
+  }
 }

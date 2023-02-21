@@ -12,7 +12,6 @@
   font-size: 32px !important;
   line-height: 20px !important;
   color: white !important;
-
 }
 .badgeStyle {
   position: absolute;
@@ -30,13 +29,11 @@
 
 .gapBetween a {
   color: white !important;
-
 }
 
 .navContainer {
   padding-left: 15px !important;
   padding-right: 15px !important;
-
 }
 
 /* .headerMain .navbar {
@@ -72,14 +69,12 @@ button.navbar-toggler.collapsed {
   font-size: 18px;
   line-height: 20px;
   color: white !important;
-
 }
 
 .searchShopIcon1 {
   margin-left: 25px;
   margin-top: 15px;
   cursor: pointer;
-
 }
 
 .searchShopIcon {
@@ -101,17 +96,17 @@ button.navbar-toggler.collapsed {
 }
 
 .searchShopIcon path {
-  color: white
+  color: white;
 }
 
-.toggleButton span{
+.toggleButton span {
   width: 1rem !important;
   margin-top: -6px !important;
   height: 1rem !important;
   color: white !important;
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
   .searchShopIcon1 {
     margin-right: 0px;
   }

@@ -3,14 +3,12 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './Menu.module.css'
 import CommonCard from '../commonComponents/Card/Card';
-import LoadMore from '../commonComponents/LoadMore/LoadMore'
 import banner1 from '../images/banner1.jpg'
 import banner2 from '../images/banner2.jpg'
 import banner3 from '../images/banner3.jpg'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios'
 import AddIcon from '@mui/icons-material/Add';
-import cardDetail from '../HomePage/HomeKitchen/CardContent'
 
 function Menu() {
   const [url, setUrl] = useState("https:/www.themealdb.com/api/json/v1/1/categories.php");
@@ -21,7 +19,6 @@ function Menu() {
 
   useEffect(() => {
     fetch(url).then(res => res.json()).then(data => {
-      console.log(data.categories);
       setItem(data.categories);
       setShow(true)
       axios
@@ -31,7 +28,6 @@ function Menu() {
     })
   }, [url, limit])
   const loadMore = () => {
-    console.log("clicked")
     setLimit(limit + 10)
   }
   return (

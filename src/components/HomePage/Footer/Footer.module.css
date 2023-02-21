@@ -12,15 +12,14 @@
   font-size: 32px !important;
   line-height: 20px !important;
   color: white !important;
-
 }
 .searchShopIcon path {
-  color:white
+  color: white;
 }
 .searchShopIcon {
   list-style-type: none;
-display: flex;
-color: white;
+  display: flex;
+  color: white;
 }
 .searchShopIcon1 {
   margin-left: 25px;
@@ -31,13 +30,12 @@ color: white;
 }
 .gapBetween a {
   color: white !important;
-
 }
 .nav-link {
   color: white !important;
   font-family: 'SF Pro Text' !important;
 }
-.gapBetween{
+.gapBetween {
   gap: 40px !important;
 }
 .copyright p {
@@ -46,10 +44,9 @@ color: white;
 .navlinks {
   justify-content: center;
   font-weight: 400;
-font-size: 18px;
-line-height: 20px;
-color: white !important;
-
+  font-size: 18px;
+  line-height: 20px;
+  color: white !important;
 }
 hr {
   margin: 5px 0px 0px;
