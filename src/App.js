@@ -83,7 +83,7 @@ function App() {
     const query = event.target.value;
     setQuery(query);
     if (query !== []) {
-      const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};categories.slug:${query};status:publish`);
+      const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};status:publish`);
       const data = await response.json();
       setSearchResults(data.data);
       const suggestedProducts = searchResults.filter(product => product.name.toLowerCase().includes(query.toLowerCase())).slice(0, 5);

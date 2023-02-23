@@ -37,9 +37,9 @@ function CommonCard(product) {
                                         <button type="button" onClick={() => contextData.incrementQuantity(product.slug)}> + </button>
                                     </div>)
                                         :
-                                        (<Button onClick={() => addToCart(product)}>Add</Button>)
+                                        (<Button className={styles.addBtn} onClick={() => addToCart(product)}>Add</Button>)
                                 ) : (
-                                    <Button onClick={() => setModalShow(true)}>Add</Button>
+                                    <Button className={styles.addBtn} onClick={() => setModalShow(true)}>Add</Button>
                                 )
                                 }
                             </div>

@@ -23,9 +23,19 @@
   color: var(--yellowish-color);
 }
 .cardImage:hover {
-  transform: scale(0.9);
+  transform: scale(0.7);
 }
-
+.addBtn:hover {
+  background-color: var(--greenish-color);
+}
+/* .inputGroup:hover {
+  background-color: var(--greenish-color);
+  color: white;
+} */
+.inputGroup button:hover {
+  background-color: var(--greenish-color);
+  color: white;
+}
 .cardBodyHead {
   display: flex;
   justify-content: space-between;

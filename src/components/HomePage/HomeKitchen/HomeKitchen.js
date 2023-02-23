@@ -67,7 +67,7 @@ function HomeKitchen() {
                                     <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
                                         <CommonCard {...result} key={result.slug} />
                                     </Col>
-                                ))}<hr style={{marginBottom:"40px"}}/>
+                                ))}<hr style={{ marginBottom: "40px" }} />
                             </Row>)
 
                             :
@@ -110,31 +110,52 @@ function HomeKitchen() {
                 </Container>
             ) : (<Container className={styles.searchIsOpen}>
                 <div className={styles.categoryTitle}>
+                    <FoodCategories />
                     <h5 className={styles.HomeKitchenTitle}>All Food Items:</h5>
                     {/* <SearchBar /> */}
 
                 </div>
                 <div className={styles.allCards}>
-                    {
-                        !contextData.query ? (
-                            <Row>
-                                {products.map(product => (
-                                    <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
-                                        <CommonCard {...product} />
-                                    </Col>
-                                ))
-                                }
-                            </Row>
-                        ) : (
-                            <Row>
-                                {contextData.searchResults.map((result) => (
-                                    <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
-                                        <CommonCard {...result} key={result.slug} />
-                                    </Col>
-                                ))}
-                            </Row>
-                        )
+                    {contextData.searchCatResults ?
+                        (<Row>
+                            {contextData.searchCatResults.map((result) => (
+                                <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                    <CommonCard {...result} key={result.slug} />
+                                </Col>
+                            ))}<hr style={{ marginBottom: "40px" }} />
+                        </Row>)
+
+                        :
+                        (<Row>
+                            {products.map(product => (
+                                <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                    <CommonCard {...product} />
+                                </Col>
+                            ))
+                            }
+                        </Row>)
                     }
+
+                    {!contextData.query ? (
+                        <Row>
+                            {products.map(product => (
+                                <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                    <CommonCard {...product} />
+                                </Col>
+                            ))
+                            }
+                        </Row>
+                    ) : (
+                        <Row>
+                            {contextData.searchResults.map((result) => (
+                                <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                    <CommonCard {...result} key={result.slug} />
+                                </Col>
+                            ))}
+                        </Row>
+                    )
+                    }
+
                     <div className={styles.loadmorebtn}>
                         <Button variant="outlined" startIcon={<AddIcon />} onClick={loadMore}>
                             Load more...
