@@ -67,7 +67,7 @@ function HomeKitchen() {
                                     <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
                                         <CommonCard {...result} key={result.slug} />
                                     </Col>
-                                ))}<hr style={{ marginBottom: "40px" }} />
+                                ))}
                             </Row>)
 
                             :
@@ -122,7 +122,7 @@ function HomeKitchen() {
                                 <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
                                     <CommonCard {...result} key={result.slug} />
                                 </Col>
-                            ))}<hr style={{ marginBottom: "40px" }} />
+                            ))}
                         </Row>)
 
                         :

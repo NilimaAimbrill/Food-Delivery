@@ -20,7 +20,7 @@ function HeroSection() {
                         <Col md={12} lg={5} xl={6} className={styles.heroContent}>
                             <h1>Authentic Home food in UK</h1>
                             <p>What2Eat is a courier service in which authentic home cook food is delivered to a customer.</p>
-                            <Input />
+                            {/* <Input /> */}
                         </Col>
                         <Col md={12} lg={7} xl={6} className={styles.heroImage}>
                             <img className={styles.heroImageCook} src={heroImage} alt='heroImage' />

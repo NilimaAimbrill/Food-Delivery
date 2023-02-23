@@ -26,7 +26,7 @@
   transform: scale(0.7);
 }
 .addBtn:hover {
-  background-color: var(--greenish-color);
+  background-color: var(--greenish-color) !important;
 }
 /* .inputGroup:hover {
   background-color: var(--greenish-color);
@@ -97,4 +97,9 @@
 }
 .inputGroup imput {
   width: 70%;
+}
+@media (max-width:768px) {
+  .cardImage {
+    height: auto;
+  }
 }
