@@ -12,6 +12,8 @@
 }
 .productCategory:hover {
   transform: scale(0.9);
+  background-color: var(--greenish-color);
+  color: white;
 }
 .productCategoryImage img{
     width: 40px;

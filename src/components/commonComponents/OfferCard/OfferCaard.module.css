@@ -4,6 +4,8 @@
 .offerCardMain img {
   border-bottom-right-radius: 7px;
   transition: transform 1s;
+  width: 190px;
+  height: 200px;
 }
 .offerCardMain img:hover {
   transform: scale(0.9);
@@ -14,12 +16,15 @@
 .offerCardBody {
   margin: auto !important;
 }
+.offerCardBody h6 {
+  font-size: 10px;
+}
 .offerAvailBtn {
   background-color: var(--greenish-color);
   border-color: var(--greenish-color);
 }
 .offerCardTitle {
-  font-size: 55px;
+  font-size: 25px;
   color: var(--yellowish-color);
 }
 .offerAvailBtn:hover {
@@ -34,6 +39,5 @@
 @media (max-width: 350px) {
   .offerCardMain img {
     width: 170px;
-    height: 373px;
   }
 }

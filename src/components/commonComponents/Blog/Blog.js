@@ -8,11 +8,9 @@ function Blog(props) {
             <Card className={styles.card}>
                 <Card.Img className={styles.blogImage} variant="top" src={props.img} />
                 <Card.Body>
-                    <Card.Title className={styles.blogHeading}>Most Satisfying Cake decorating
-                        Cake ideas</Card.Title>
+                    <Card.Title className={styles.blogHeading}><b>{props.mainLine}</b></Card.Title>
                     <Card.Text className={styles.blogPara}>
-                        Quis hendrerit nibh mauris sed faucibus.
-                        Quis hendrerit nibh mauris sed faucibus.
+                        {props.blogParagraph}
                     </Card.Text>
                 </Card.Body>
             </Card>
