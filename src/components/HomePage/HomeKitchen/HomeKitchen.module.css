@@ -15,6 +15,11 @@
 .AllHomeKitchen {
   text-align: left;
 }
+.AllHomeKitchen h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 .buttonMargin {
   margin-top: 32px;
   padding: 13px 19px;
@@ -48,7 +53,7 @@
   justify-content: space-between;
 }
 .categoryTitle {
-  margin-top: 35px;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: left;
   display: flex;

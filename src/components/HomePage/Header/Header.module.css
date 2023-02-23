@@ -81,6 +81,9 @@ button.navbar-toggler.collapsed {
 .searchShopIcon {
   padding: 0px;
 }
+.searchShopIcon1 svg {
+  cursor: pointer;
+}
 
 /* .navbar-nav li{
   font-family: 'Poppins', sans-serif;
@@ -106,7 +109,12 @@ button.navbar-toggler.collapsed {
   height: 1rem !important;
   color: white !important;
 }
-
+.navlinks input {
+  margin-right: 15px;
+}
+.navlinks input:focus-within {
+  outline: none;
+}
 @media (max-width: 375px) {
   .searchShopIcon1 {
     margin-right: 0px;

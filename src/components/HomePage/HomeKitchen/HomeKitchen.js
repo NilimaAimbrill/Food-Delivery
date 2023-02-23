@@ -44,29 +44,44 @@ function HomeKitchen() {
     return (
         <div className={styles.HomeKitchenMain}>
             {!contextData.searchOpen ? (
-            <Container>
-                <div className={styles.AllHomeKitchen}>
-                    <h2 className={styles.HomeKitchenTitle}>Home Kitchen</h2>
-                    <div className={styles.categoryTitle}>
-                        <h5 className={styles.HomeKitchenTitle}>Select Category:</h5>
-                    </div>
+                <Container>
+                    <div className={styles.AllHomeKitchen}>
+                        <h2 className={styles.HomeKitchenTitleHeading}>Home Kitchen</h2>
+                        <div className={styles.categoryTitle}>
+                            <h5 className={styles.HomeKitchenTitle}>Select Category:</h5>
+                        </div>
 
-                    {
-                        show ? <FoodCategories data={item} /> : "not found"
-                    }
-
-
-                    {/* <ButtonGrp />
+                        <FoodCategories />
+                        {/* <ButtonGrp />
                     <SelectDropDown className={styles.buttonMargin} /> */}
-                </div>
-                <div className={styles.categoryTitle}>
-                    <h5 className={styles.HomeKitchenTitle}>All Food Items:</h5>
-                    <SearchBar />
+                    </div>
+                    <div className={styles.categoryTitle}>
+                        <h5 className={styles.HomeKitchenTitle}>All Food Items:</h5>
+                        {/* <SearchBar /> */}
 
-                </div>
-                <div className={styles.allCards}>
-                    {
-                        !contextData.query ? (
+                    </div>
+                    <div className={styles.allCards}>
+                        {contextData.searchCatResults ?
+                            (<Row>
+                                {contextData.searchCatResults.map((result) => (
+                                    <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                        <CommonCard {...result} key={result.slug} />
+                                    </Col>
+                                ))}<hr style={{marginBottom:"40px"}}/>
+                            </Row>)
+
+                            :
+                            (<Row>
+                                {products.map(product => (
+                                    <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
+                                        <CommonCard {...product} />
+                                    </Col>
+                                ))
+                                }
+                            </Row>)
+                        }
+
+                        {!contextData.query ? (
                             <Row>
                                 {products.map(product => (
                                     <Col lg={3} xl={3} xxl={3} md={4} className={styles.cardMarginBottom}>
@@ -84,15 +99,16 @@ function HomeKitchen() {
                                 ))}
                             </Row>
                         )
-                    }
-                    <div className={styles.loadmorebtn}>
-                        <Button variant="outlined" startIcon={<AddIcon />} onClick={loadMore}>
-                            Load more...
-                        </Button>
+                        }
+
+                        <div className={styles.loadmorebtn}>
+                            <Button variant="outlined" startIcon={<AddIcon />} onClick={loadMore}>
+                                Load more...
+                            </Button>
+                        </div>
                     </div>
-                </div>
-            </Container>
-            ): (<Container className={styles.searchIsOpen}>
+                </Container>
+            ) : (<Container className={styles.searchIsOpen}>
                 <div className={styles.categoryTitle}>
                     <h5 className={styles.HomeKitchenTitle}>All Food Items:</h5>
                     {/* <SearchBar /> */}

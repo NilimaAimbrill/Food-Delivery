@@ -82,8 +82,8 @@ function App() {
   const handleInputChange = async (event) => {
     const query = event.target.value;
     setQuery(query);
-    if (query !== "") {
-      const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};status:publish`);
+    if (query !== []) {
+      const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};categories.slug:${query};status:publish`);
       const data = await response.json();
       setSearchResults(data.data);
       const suggestedProducts = searchResults.filter(product => product.name.toLowerCase().includes(query.toLowerCase())).slice(0, 5);
@@ -94,17 +94,83 @@ function App() {
 
   };
 
-  const handleSearch = async () => {
-    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};status:publish`);
-    const data = await response.json();
-    console.log("data", data)
-    setSearchResults(data.data);
-    console.log("product", query);
-  };
+  // const handleSearch = async () => {
+  //   const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};status:publish`);
+  //   const data = await response.json();
+  //   console.log("data", data)
+  //   setSearchResults(data.data);
+  //   console.log("product", query);
+  // };
 
+  const [searchCatResults, setCatSearchResults] = useState([]);
+
+  const handleCatSelectFruit = async () => {
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:fruits-vegetables;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+    console.log("category", searchCatResults)
+  };
+  const handleCatSelectMeat = async () => {
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:meat-fish;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectSnack = async () => {
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:snacks;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectPet = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:pet-care;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectHome = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:home-cleaning;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectDairy = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:dairy;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectCooking = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:cooking;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectBreakfast = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:breakfast;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectBeverages = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:beverage;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
+  const handleCatSelectHealthAndBeauty = async () => {
+
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;categories.slug:health-beauty;status:publish`);
+    const data = await response.json();
+    setCatSearchResults(data.data);
+  };
   return (
     <div className='App'>
-      <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, decrementQuantity, productCount, removeFromCart, incrementQuantity, setProductCount, isOpen, setOpen, toggleDrawer, addToCart, totalPrice, setTotalPrice, cart, setCart, products, handleInputChange, handleSearch, searchResults, setSearchResults, query, setQuery, toggleSearch, searchOpen }}>
+      <LoginContext.Provider value={{
+        isLoggedIn, setIsLoggedIn, decrementQuantity, productCount, removeFromCart, incrementQuantity, setProductCount, isOpen, setOpen, toggleDrawer, addToCart, totalPrice, setTotalPrice,
+        cart, setCart, products, handleInputChange, searchResults, setSearchResults, query,
+        setQuery, toggleSearch, searchOpen, searchCatResults, setCatSearchResults, handleCatSelectHealthAndBeauty,
+        handleCatSelectBeverages, handleCatSelectBreakfast, handleCatSelectCooking, handleCatSelectDairy,
+        handleCatSelectHome, handleCatSelectPet, handleCatSelectSnack, handleCatSelectMeat, handleCatSelectFruit
+      }}>
         <BrowserRouter>
           <div className={isOpen ? "temp blur" : "temp"}>
             <Header />

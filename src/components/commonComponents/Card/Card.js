@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import styles from './Card.module.css'
 import Button from '@mui/material/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { LoginContext } from '../../../App';
+import SignUp from '../../HomePage/Header/Sign Up modal/SignUp';
 
 function CommonCard(product) {
+    const [modalShow, setModalShow] = useState(false);
 
     const contextData = useContext(LoginContext);
 
@@ -37,7 +39,7 @@ function CommonCard(product) {
                                         :
                                         (<Button onClick={() => addToCart(product)}>Add</Button>)
                                 ) : (
-                                    <Button onClick={() => alert("Please sign in")}>Add</Button>
+                                    <Button onClick={() => setModalShow(true)}>Add</Button>
                                 )
                                 }
                             </div>
@@ -45,7 +47,11 @@ function CommonCard(product) {
                     </div>
                 </Card.Body>
             </Card>
-        </div >
+            <SignUp
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+        </div>
     )
 }
 

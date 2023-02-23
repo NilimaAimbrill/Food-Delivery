@@ -9,10 +9,12 @@
 }
 .card h5 {
   color: black;
+  font-size: 15px;
 }
 .cardImage {
   cursor: pointer;
   transition: transform 1s;
+  height: 259px;
 }
 .addBoxIcon path:hover {
   color: var(--greenish-color);

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import Container from 'react-bootstrap/Container';
@@ -14,7 +14,7 @@ import SearchBar from '../../commonComponents/GlobalSearchBar/SearchBar';
 import SearchIcon from '@mui/icons-material/Search';
 
 function Header() {
-    const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
     const contextData = useContext(LoginContext);
     const { productCount } = useContext(LoginContext);
     const { toggleDrawer } = useContext(LoginContext);
@@ -51,7 +51,7 @@ function Header() {
                         <div className={styles.searchShopIconMain}>
                             <ul className={styles.searchShopIcon}>
                                 <li className={styles.searchShopIcon1}>
-                                    <SearchIcon onClick={toggleSearch} />
+                                    <SearchIcon className={styles.searchIconToggle} onClick={toggleSearch} />
                                     {contextData.isLoggedIn === true ? (
                                         <Tooltip title='My cart'>
                                             <span className={styles.myCartIcon} onClick={toggleDrawer}><ShoppingBagIcon className='searchIcon' /><Badge className={styles.badgeStyle}>{productCount}</Badge></span>
