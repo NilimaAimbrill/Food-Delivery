@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import StarIcon from '@mui/icons-material/Star';
@@ -11,7 +11,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ReadMoreToggle from '../ReadMoreButton/ReadMoreToggle';
 import ProductGallery from '../ProductGallery/ProductGallery';
 import CommonCard from '../Card/Card';
-
+import { LoginContext } from '../../../App';
 
 function FoodDetails() {
 
@@ -26,6 +26,9 @@ function FoodDetails() {
             .catch((error) => console.log(error));
     }, [productId]);
    
+    const { addToCart } = useContext(LoginContext);
+    const contextData = useContext(LoginContext);
+
     return (
         <div>
             <div className={styles.foodDetailsmain}>
@@ -60,7 +63,7 @@ function FoodDetails() {
                                         <p className={styles.cancelPrice}>${products?.price}</p>
                                     </div>
                                     <div className={styles.btnAvailableItem}>
-                                        <button className={styles.addToCartBtn}>Add to cart <AddShoppingCartIcon /></button>
+                                        <button className={styles.addToCartBtn} onClick={() => addToCart(contextData.product)}>Add to cart <AddShoppingCartIcon /></button>
                                         <p>{products?.quantity} pieces available</p>
                                     </div>
                                 </div>

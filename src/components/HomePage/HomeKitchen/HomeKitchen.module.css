@@ -9,7 +9,7 @@
   font-family: 'Gilroy-Medium';
   letter-spacing: -0.012em;
   color: #000000;
-  margin-bottom: 16px;
+  margin: auto 0;
 }
 
 .AllHomeKitchen {
@@ -51,6 +51,8 @@
   margin-top: 35px;
   margin-bottom: 20px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* load more  */
@@ -72,4 +74,7 @@
 }
 .loadmorebtn button:hover {
   border: 1px solid var(--greenish-color) !important;
+}
+.searchIsOpen{
+  margin-top: -100px;
 }

@@ -30,11 +30,11 @@ function CartPage() {
                                 <button className={styles.dicreseecreBtn} type="button" onClick={() => cartData.decrementQuantity(product.id)}> - </button>
                             </div>
                             <img src={product?.image?.thumbnail} alt="image" />
-                            <div className={styles.namePriceUnit}>
+                            <Link className={styles.namePriceUnit} to={`/food_details/${product.slug}`} onClick={toggleDrawer}>
                                 <p><b>{product?.name}</b></p>
                                 <p><b>${(product?.price).toFixed(2)}</b></p>
                                 <p>{product?.unit}</p>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     <div className={styles.myAsideMenuRight}>

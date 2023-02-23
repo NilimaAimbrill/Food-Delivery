@@ -30,7 +30,7 @@
 }
 
 .searchButton:hover {
-  background: var(--greenish-color) !important;
+  background: var(--yellowish-color) !important;
   color: white !important;
   border-color: var(--yellowish-color) !important;
 }

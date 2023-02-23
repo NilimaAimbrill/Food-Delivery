@@ -72,9 +72,10 @@ button.navbar-toggler.collapsed {
 }
 
 .searchShopIcon1 {
-  margin-left: 25px;
   margin-top: 15px;
+  display: flex;
   cursor: pointer;
+  gap: 20px;
 }
 
 .searchShopIcon {

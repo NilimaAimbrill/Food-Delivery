@@ -10,6 +10,7 @@
 }
 .mainProductImage img {
   height: 380px;
+  transition: transform 1s;
 }
 .allPhotos {
   display: flex;
@@ -28,11 +29,14 @@
     justify-content: center;
   }
 }
+.mainProductImage img:hover {
+  transform: scale(0.9);
+}
 @media (max-width: 426px) {
   .photoGalleryCollumns img {
-    width: 100px;
+    width: 80px;
   }
   .mainProductImage img {
-    height: 270px;
+    height: 200px;
   }
 }

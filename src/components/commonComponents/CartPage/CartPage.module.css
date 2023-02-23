@@ -20,6 +20,13 @@
   height: 100%;
   overflow: auto;
 }
+.mainCartPage a {
+  text-decoration: none;
+}
+.mainCartPage a:hover {
+  text-decoration: none;
+  color: grey;
+}
 .checkOutBtn {
   position: fixed;
   bottom: 0;
@@ -116,6 +123,7 @@
 
 .namePriceUnit p {
   margin-bottom: 10px !important;
+  color: grey;
 }
 .myAsideMenuRight {
   display: flex;
@@ -132,6 +140,7 @@
   width: 20%;
   height: 50%;
   margin: auto 0;
+  cursor: pointer;
 }
 .myAsideMenuLeft {
   margin: auto 0px;

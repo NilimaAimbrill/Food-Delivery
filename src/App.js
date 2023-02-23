@@ -13,7 +13,7 @@ import './variable.css';
 import FoodDetails from './components/commonComponents/Food Details/FoodDetails';
 import CartPage from './components/commonComponents/CartPage/CartPage';
 import CheckOutPage from './components/commonComponents/CheckOutPage/CheckOutPage';
-
+import SearchItem from './components/commonComponents/GlobalSearchBar/SearchItems';
 
 export const LoginContext = createContext();
 
@@ -24,16 +24,13 @@ function App() {
   const [products, setProducts] = useState([]);
   const [isOpen, setOpen] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-
 
   const addToCart = (product) => {
     const updatedCart = [...cart, { ...product, id: product.slug, quantity: 1 }];
     setCart(updatedCart);
     setTotalPrice(totalPrice + product.price);
     setProducts(
-      products.map((p) => (p.id === product.id ? { ...p, isInCart: true,prodQuantity: 1 } : p))
+      products.map((p) => (p.id === product.id ? { ...p, isInCart: true, prodQuantity: 1 } : p))
     );
     setProductCount(productCount + 1);
   };
@@ -65,17 +62,49 @@ function App() {
     setCart(updatedCart);
   };
 
-
   const decrementQuantity = (productId) => {
     const updatedCart = cart.map((item) =>
-    item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
+      item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
     );
     setCart(updatedCart);
   };
 
+  const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [noResults, setNoResults] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [suggestedProducts, setSuggestedProducts] = useState([]);
+
+  const toggleSearch = () => {
+    setSearchOpen(!searchOpen);
+  };
+
+  const handleInputChange = async (event) => {
+    const query = event.target.value;
+    setQuery(query);
+    if (query !== "") {
+      const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};status:publish`);
+      const data = await response.json();
+      setSearchResults(data.data);
+      const suggestedProducts = searchResults.filter(product => product.name.toLowerCase().includes(query.toLowerCase())).slice(0, 5);
+      setSuggestedProducts(suggestedProducts);
+    } else {
+      setSearchResults([]);
+    }
+
+  };
+
+  const handleSearch = async () => {
+    const response = await fetch(`https://mock.redq.io/api/products?search=type.slug:grocery;name:${query};status:publish`);
+    const data = await response.json();
+    console.log("data", data)
+    setSearchResults(data.data);
+    console.log("product", query);
+  };
+
   return (
     <div className='App'>
-      <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, decrementQuantity, productCount, removeFromCart, incrementQuantity, setProductCount, isOpen, setOpen, toggleDrawer, addToCart, totalPrice, setTotalPrice, cart, setCart, searchQuery, setSearchQuery, searchResults, setSearchResults, products }}>
+      <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, decrementQuantity, productCount, removeFromCart, incrementQuantity, setProductCount, isOpen, setOpen, toggleDrawer, addToCart, totalPrice, setTotalPrice, cart, setCart, products, handleInputChange, handleSearch, searchResults, setSearchResults, query, setQuery, toggleSearch, searchOpen }}>
         <BrowserRouter>
           <div className={isOpen ? "temp blur" : "temp"}>
             <Header />
@@ -88,6 +117,7 @@ function App() {
                 <Route path='/offer' element={<Offer />} />
                 <Route path='/food_details/:productId' element={<FoodDetails />} />
                 <Route path='/checkoutpage' element={<CheckOutPage />} />
+                <Route path='/searchItems' element={<SearchItem />} />
               </Routes>
               <Footer />
             </div>

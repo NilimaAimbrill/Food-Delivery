@@ -1,0 +1,24 @@
+.globalSearchBar button{
+    padding: 10px 15px;
+    background-color: var(--yellowish-color);
+    color: white;
+    border: 1px solid var(--yellowish-color);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.globalSearchBar button:hover {
+    background-color: var(--greenish-color);
+}
+.globalSearchBar input {
+    width: 70%;
+    padding: 10px 5px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid lightgrey;
+}
+.globalSearchBar input:focus {
+    border: 1px solid lightgrey !important;
+}
+/* .globalSearchBar {
+    width: 50%;
+} */
